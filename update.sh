@@ -3,7 +3,7 @@
 # git config --global user.name "xuejingkai"
 # git config --global user.email "xuejingkai11@126.com"
 
-# cd D:/quarto/ustc
+cd D:/quarto/ustc
 # git init
 # git remote remove origin
 # git remote add origin https://github.com/xuejingkai/kk-atmos.github.io.git
