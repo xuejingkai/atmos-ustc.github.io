@@ -1,0 +1,115 @@
+project:
+  type: website
+  output-dir: docs
+
+# website:
+#   title: "My Quarto Website"
+#   sidebar:
+#     search: true
+#     contents:
+#       - text: "Home"
+#         href: index.qmd
+#       - text: "Notebook"
+#         href: notebooks/wrf_extract_wind.ipynb
+# project:
+#   type: website
+
+
+
+website:
+  title: "ustc"
+  page-navigation: true
+  navbar:
+    #background: primary
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Tutorials"
+        href: tutorials.qmd
+      - text: "How-To"
+        href: howto.qmd
+      - text: "Fundamentals"
+        href: fundamentals.qmd
+      - text: "Reference"
+        href: reference.qmd
+
+
+  sidebar:
+    style: "floating"
+    search: true
+    contents:
+      - text: "Introduction"
+        href: introduction.qmd
+      - section: "Basics"
+        href: basics-summary.qmd
+        contents:
+          - index.qmd
+          - basics-knitr.qmd
+          - basics-jupyter.qmd
+      - section: "Layout"
+        contents:
+          - text: "Notebook"
+            href: notebooks/wrf_extract_wind.ipynb
+
+          - text: "Notebook2"
+            href: notebooks/ustc_plot_Anhuimap.ipynb          
+      - section: advanced.qmd
+        contents:
+          - raw-code.qmd
+          - custom-theme.qmd
+      - acknowlegment.qmd
+    tools:
+      - icon: twitter
+        href: https://twitter.com
+
+      - icon: github
+        menu:
+          - text: Source Code
+            href:  https://code.com
+          - text: Report a Bug
+            href:  https://bugs.com
+
+
+  page-footer: 
+    left: "Copyright 2024, Jingkai Xue" 
+    right: 
+      - icon: github
+        href: https://github.com/
+      - icon: twitter 
+        href: https://twitter.com/
+
+  # page-footer:
+  #   border: false
+
+  # page-footer:
+  #   background: light
+  
+  reader-mode: true
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+# website:
+#   back-to-top-navigation: true
+#   title: "ustc"
+#   page-navigation: true
+#   sidebar:
+
+#     contents:
+#       - section: "First Section"
+#         contents:
+#           - text: "Notebook"    
+#             href: notebooks/wrf_extract_wind.ipynb
+#           - href: document2.qmd
+#           - href: document3.qmd
+#       - text: "---"
+#       - section: "Second Section"
+#         contents:
+#           - href: document4.qmd
+#           - href: document5.qmd
+#           - href: document6.qmd
+
