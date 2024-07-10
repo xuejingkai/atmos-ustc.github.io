@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ustc_plot_anhuimap – ustc</title>
+<title>quarto-input761f692ab679fc72 – ustc</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,8 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notebooks/相关性散点图.html" rel="next">
-<link href="../notebooks/wrf_extract_wind.html" rel="prev">
+<link href="../notebooks/ustc_plot_Anhuimap.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -160,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/wrf_extract_wind.html">画图</a></li><li class="breadcrumb-item"><a href="../notebooks/ustc_plot_Anhuimap.html">plot_ustc_Anhuimap</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/wrf_extract_wind.html">画图</a></li><li class="breadcrumb-item"><a href="../notebooks/相关性散点图.html">plot_相关性散点图</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -244,13 +243,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/ustc_plot_Anhuimap.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notebooks/ustc_plot_Anhuimap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">plot_ustc_Anhuimap</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notebooks/相关性散点图.html" class="sidebar-item-text sidebar-link">
+  <a href="../notebooks/相关性散点图.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">plot_相关性散点图</span></a>
   </div>
 </li>
@@ -290,130 +289,199 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="1555852c" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-10T15:11:58.558939Z&quot;,&quot;start_time&quot;:&quot;2024-05-10T15:11:56.797715Z&quot;}" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Polygon</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>matplotlib.use(<span class="st">'Agg'</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> font_manager <span class="im">as</span> fm, rcParams</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.colors</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.patches <span class="im">as</span> mpathes</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.path <span class="im">import</span> Path</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.basemap <span class="im">import</span> Basemap</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shapefile</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cmap_own():</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    cmap_value <span class="op">=</span> np.loadtxt(<span class="st">'/exports/swj/OMI_results/result_compare/colormap_22.txt'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    cmap <span class="op">=</span> []</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(cmap_value.shape[<span class="dv">0</span>]):</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        cmap.append((cmap_value[i, <span class="dv">0</span>], cmap_value[i, <span class="dv">1</span>], cmap_value[i, <span class="dv">2</span>]))</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> matplotlib.colors.LinearSegmentedColormap.from_list(<span class="st">'test_cmap'</span>, cmap, N<span class="op">=</span>cmap_value.shape[<span class="dv">0</span>])</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> shp2clip(originfig,ax,shpfile,region):</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    sf <span class="op">=</span> shapefile.Reader(shpfile)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    vertices <span class="op">=</span> []</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    codes <span class="op">=</span> []</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> shape_rec <span class="kw">in</span> sf.shapeRecords():</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> shape_rec.record[<span class="dv">0</span>] <span class="kw">in</span> region:</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>            pts <span class="op">=</span> shape_rec.shape.points</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>            prt <span class="op">=</span> <span class="bu">list</span>(shape_rec.shape.parts) <span class="op">+</span> [<span class="bu">len</span>(pts)]</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(prt) <span class="op">-</span> <span class="dv">1</span>):</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>                <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(prt[i], prt[i<span class="op">+</span><span class="dv">1</span>]):</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>                    vertices.append((pts[j][<span class="dv">0</span>], pts[j][<span class="dv">1</span>]))</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>                codes <span class="op">+=</span> [Path.MOVETO]</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>                codes <span class="op">+=</span> [Path.LINETO] <span class="op">*</span> (prt[i<span class="op">+</span><span class="dv">1</span>] <span class="op">-</span> prt[i] <span class="op">-</span><span class="dv">2</span>)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>                codes <span class="op">+=</span> [Path.CLOSEPOLY]</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>            clip <span class="op">=</span> Path(vertices, codes)</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>            clip <span class="op">=</span> mpathes.PathPatch(clip, transform<span class="op">=</span>ax.transData)</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> contour <span class="kw">in</span> originfig.collections:</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        contour.set_clip_path(clip)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> clip</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> wgs84toWebMercator(lon,lat):</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span>  lon<span class="op">*</span><span class="fl">20037508.342789</span><span class="op">/</span><span class="dv">180</span></span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span>math.log(math.tan((<span class="dv">90</span><span class="op">+</span>lat)<span class="op">*</span>math.pi<span class="op">/</span><span class="dv">360</span>))<span class="op">/</span>(math.pi<span class="op">/</span><span class="dv">180</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> y <span class="op">*</span><span class="fl">20037508.34789</span><span class="op">/</span><span class="dv">180</span></span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x,y</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>fpath <span class="op">=</span> os.path.join(matplotlib.get_data_path(),<span class="st">'/exports/WST/himawari/tif_test/Bold.ttf'</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>prop <span class="op">=</span> fm.FontProperties(fname<span class="op">=</span>fpath)</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>fname <span class="op">=</span> os.path.split(fpath)[<span class="dv">1</span>]</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>lat_begin<span class="op">=</span><span class="fl">28.5</span></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>lat_end<span class="op">=</span><span class="dv">35</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>lon_begin<span class="op">=</span><span class="fl">114.5</span></span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>lon_end<span class="op">=</span><span class="dv">120</span></span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>((lon_end<span class="op">-</span>lon_begin)<span class="op">*</span><span class="dv">2</span>, (lat_end<span class="op">-</span>lat_begin)<span class="op">*</span><span class="dv">2</span>))</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>ax1 <span class="op">=</span> fig.add_axes([<span class="fl">0.1</span>, <span class="fl">0.1</span>, <span class="fl">0.7</span>, <span class="fl">0.7</span>])</span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> Basemap(projection<span class="op">=</span><span class="st">'cyl'</span>, resolution<span class="op">=</span><span class="st">'l'</span>, llcrnrlat<span class="op">=</span>lat_begin, urcrnrlat<span class="op">=</span>lat_end, llcrnrlon<span class="op">=</span>lon_begin, urcrnrlon<span class="op">=</span>lon_end)</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>m.readshapefile(<span class="st">"/exports/WST/himawari/tif_test/anhuishp/anhuinew/anhui"</span>, <span class="st">'NAME1'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, drawbounds<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> shapedict, state <span class="kw">in</span> <span class="bu">zip</span>(m.NAME1_info, m.NAME1):</span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>    short_name <span class="op">=</span> shapedict[<span class="st">'市'</span>]</span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>    point <span class="op">=</span> np.array(state)</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>    <span class="co"># x,y = center_geolocation(point)</span></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 获取城市图形的中点</span></span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>    ref_polygon <span class="op">=</span> Polygon(point)</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># get the x and y coordinate of the centroid</span></span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> [<span class="bu">float</span>(ref_polygon.centroid.wkt[<span class="dv">7</span>:<span class="dv">19</span>]), <span class="bu">float</span>(ref_polygon.centroid.wkt[<span class="dv">25</span>:<span class="dv">39</span>])]</span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>    <span class="co"># x, y = np.mean(np.array(state), axis=0)</span></span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>    <span class="co"># if (short_name == '连云港市')|(short_name == '南通市'):</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> point.shape[<span class="dv">0</span>] <span class="op">&lt;</span> <span class="dv">100</span>:</span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>        plt.annotate(short_name[<span class="dv">0</span>:<span class="op">-</span><span class="dv">1</span>].<span class="bu">format</span>(fname), xy<span class="op">=</span>(x <span class="op">-</span> <span class="fl">0.2</span>, y <span class="op">-</span> <span class="fl">0.1</span>), fontproperties<span class="op">=</span>prop, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>cdict <span class="op">=</span> [<span class="st">'#FFFFFF'</span>, <span class="st">'#C2C8E1'</span>, <span class="st">'#9BA9DC'</span>, <span class="st">'#4C9DF4'</span>, <span class="st">'#86D1F9'</span>, <span class="st">'#A7E5EF'</span>, <span class="st">'#FEFC59'</span>, <span class="st">'#FD7822'</span>, <span class="st">'#FC131F'</span>,</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>         <span class="st">'#A3090E'</span>]</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>colormap <span class="op">=</span> cmap_own()</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>colormap.set_bad(color<span class="op">=</span><span class="st">'w'</span>, alpha<span class="op">=</span><span class="fl">0.0</span>)</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>position <span class="op">=</span> fig.add_axes([<span class="fl">0.88</span>, <span class="fl">0.1</span>, <span class="fl">0.03</span>, <span class="fl">0.7</span>])</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>time_target<span class="op">=</span><span class="st">''</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'./tropomi_Anhui_HCHO_'</span> <span class="op">+</span> time_target <span class="op">+</span> <span class="st">'.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>plt.close()</span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>str_day <span class="op">=</span> <span class="st">'./tropomi_Anhui_HCHO_'</span> <span class="op">+</span> time_target <span class="op">+</span> <span class="st">'.png'</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> Image.<span class="bu">open</span>(str_day)</span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a>img <span class="op">=</span> img.convert(<span class="st">'RGBA'</span>)</span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>png <span class="op">=</span> Image.<span class="bu">open</span>(<span class="st">'/satellite/exports1/zhaochunhui/normal/pic/logotest4.png'</span>)</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a>png <span class="op">=</span> png.resize((<span class="bu">int</span>(img.size[<span class="dv">0</span>] <span class="op">*</span> <span class="fl">0.7</span> <span class="op">-</span><span class="dv">3</span>) , <span class="bu">int</span>(img.size[<span class="dv">0</span>] <span class="op">*</span> <span class="fl">0.07</span>)), Image.ANTIALIAS)</span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a>r, g, b, a <span class="op">=</span> png.split()</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a>png_x <span class="op">=</span> <span class="bu">int</span>(img.size[<span class="dv">0</span>] <span class="op">/</span> <span class="dv">10</span>) <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>png_y <span class="op">=</span> <span class="bu">int</span>(img.size[<span class="dv">1</span>] <span class="op">*</span> <span class="fl">0.9</span>) <span class="op">-</span> <span class="bu">int</span>(img.size[<span class="dv">0</span>] <span class="op">*</span> <span class="fl">0.07</span>)<span class="op">-</span><span class="dv">5</span></span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a>img.paste(png, (png_x, png_y), mask<span class="op">=</span>a)</span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>img.save(str_day, quality<span class="op">=</span><span class="dv">95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/ipykernel_326436/4040225787.py:90: UserWarning: This figure includes Axes that are not compatible with tight_layout, so results might be incorrect.
-  plt.tight_layout()
-/tmp/ipykernel_326436/4040225787.py:100: DeprecationWarning: ANTIALIAS is deprecated and will be removed in Pillow 10 (2023-07-01). Use Resampling.LANCZOS instead.
-  png = png.resize((int(img.size[0] * 0.7 -3) , int(img.size[0] * 0.07)), Image.ANTIALIAS)</code></pre>
+<div id="07b5c07e" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-13T11:53:52.080078Z&quot;,&quot;start_time&quot;:&quot;2024-05-13T11:53:49.866312Z&quot;}" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> plot</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plot.rc[<span class="st">'figure.facecolor'</span>] <span class="op">=</span> <span class="st">'w'</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> copy </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="bad3bcb4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-13T11:54:17.941247Z&quot;,&quot;start_time&quot;:&quot;2024-05-13T11:54:17.209474Z&quot;}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib.colors <span class="im">import</span> Normalize </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.interpolate <span class="im">import</span> interpn</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> pearsonr</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_percentage_error</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 使用sklearn调用衡量线性回归的MSE 、 RMSE、 MAE、r2</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> sqrt</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_absolute_error</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> r2_score</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> density_scatter( x , y, ax <span class="op">=</span> <span class="va">None</span>, sort <span class="op">=</span> <span class="va">True</span>, bins <span class="op">=</span> <span class="dv">20</span>,percent<span class="op">=</span><span class="dv">80</span>,metawidth<span class="op">=</span><span class="fl">0.4</span>, <span class="op">**</span>kwargs )   :</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="co">    Scatter plot colored by 2d histogram</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ax <span class="kw">is</span> <span class="va">None</span> :</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        fig , ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    data , x_e, y_e <span class="op">=</span> np.histogram2d( x, y, bins <span class="op">=</span> bins, density <span class="op">=</span> <span class="va">True</span> )</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    z <span class="op">=</span> interpn( ( <span class="fl">0.5</span><span class="op">*</span>(x_e[<span class="dv">1</span>:] <span class="op">+</span> x_e[:<span class="op">-</span><span class="dv">1</span>]) , <span class="fl">0.5</span><span class="op">*</span>(y_e[<span class="dv">1</span>:]<span class="op">+</span>y_e[:<span class="op">-</span><span class="dv">1</span>]) ) , data , np.vstack([x,y]).T , method <span class="op">=</span> <span class="st">"splinef2d"</span>, bounds_error <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">#To be sure to plot all data</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    z[np.where(np.isnan(z))] <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Sort the points by density, so that the densest points are plotted last</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> sort :</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        idx <span class="op">=</span> z.argsort()</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>        x, y, z <span class="op">=</span> x[idx], y[idx], z[idx]</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    m<span class="op">=</span>ax.scatter( x, y<span class="co">#c=z</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>                 , vmax<span class="op">=</span>np.percentile(z, percent),vmin<span class="op">=</span><span class="dv">0</span>,<span class="op">**</span>kwargs )<span class="co">#vmax=80%</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'cmap'</span> <span class="kw">in</span> kwargs:</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 包含cmap参数</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        cmap <span class="op">=</span> kwargs[<span class="st">'cmap'</span>]</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    vmin <span class="op">=</span> np.<span class="bu">min</span>(z)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    vmax <span class="op">=</span> np.<span class="bu">max</span>(z)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'vmin'</span> <span class="kw">in</span> kwargs:</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 包含cmap参数</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        vmin <span class="op">=</span> kwargs[<span class="st">'vmin'</span>]    </span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="st">'vmax'</span> <span class="kw">in</span> kwargs:</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 包含cmap参数</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        vmax <span class="op">=</span> kwargs[<span class="st">'vmax'</span>] </span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    norm <span class="op">=</span> Normalize(vmin <span class="op">=</span> vmin, vmax <span class="op">=</span> vmax)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="co">#cbar = ax.colorbar(cm.ScalarMappable(norm = norm,cmap=cmap))</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="co">#     cbar=ax.colorbar(m,loc='r',lw=metawidth)</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co">#     cbar.ax.set_ylabel('Density')</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> ax,m</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9558c12f" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-10T15:12:08.945115Z&quot;,&quot;start_time&quot;:&quot;2024-05-10T15:12:08.199226Z&quot;}" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> PIL <span class="im">import</span> Image</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<div id="94282d14" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-13T11:58:35.119599Z&quot;,&quot;start_time&quot;:&quot;2024-05-13T11:58:35.113979Z&quot;}" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#dsout.interp_like(dsy),dsy)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#x,y=dsout.interp_like(dsy).values.flatten(),dsy.values.flatten()</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>img_PIL <span class="op">=</span> Image.<span class="bu">open</span>(str_day)<span class="co">#读取数据</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>img_PIL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>dx<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>dx2<span class="op">=</span><span class="dv">1</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成随机数据</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">0</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>n_samples <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.rand(n_samples)<span class="op">*</span><span class="dv">10</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">1</span> <span class="op">*</span> x <span class="op">+</span> np.random.randn(n_samples)<span class="op">*</span><span class="dv">1</span>  <span class="co"># y = 2x + 噪声</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>nan_union <span class="op">=</span> np.isnan(x) <span class="op">+</span> np.isnan(y)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>y[<span class="op">~</span>nan_union]</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>x[<span class="op">~</span>nan_union]</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'a'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>R<span class="op">=</span>pearsonr(x,y)[<span class="dv">0</span>]</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(R)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mean_absolute_error:"</span>, mean_absolute_error(x,y))</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mean_squared_error:"</span>, mean_squared_error(x,y))</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"rmse:"</span>, sqrt(mean_squared_error(x,y)))</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"r2 score:"</span>, r2_score(x,y))</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>mape<span class="op">=</span>mean_absolute_percentage_error(x,y)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"mape:"</span>,mape)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>a
+0.944522569256287
+mean_absolute_error: 0.8623845994287559
+mean_squared_error: 1.0297617241074744
+rmse: 1.0147717596127093
+r2 score: 0.8761081822858403
+mape: 0.37054958340747335</code></pre>
+</div>
+</div>
+<div id="d2950a19" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-13T11:58:35.602495Z&quot;,&quot;start_time&quot;:&quot;2024-05-13T11:58:35.599055Z&quot;}" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<pre><code>array([ 4.32298520e+00,  8.05272015e+00,  6.49329620e+00,  3.91258814e+00,
+        5.72480019e+00,  8.35483031e+00,  5.55465168e+00,  8.73780517e+00,
+        8.56587498e+00,  4.88886692e+00,  7.51407343e+00,  6.51139427e+00,
+        5.88872059e+00,  1.02326054e+01,  1.06672698e+00,  1.57786617e+00,
+        2.12683995e-01,  1.01120689e+01,  7.90847960e+00,  9.10211085e+00,
+        1.16693341e+01,  6.64382658e+00,  3.34430862e+00,  8.77468847e+00,
+        9.62085358e-03,  8.34283140e+00,  1.01991389e+00,  8.69923436e+00,
+        7.14142524e+00,  5.62713419e+00,  4.51311508e+00,  8.64838155e+00,
+        3.70027764e+00,  7.59440444e+00, -8.01053666e-02,  6.97881137e+00,
+        7.06820919e+00,  6.01432988e+00,  1.00515602e+01,  7.74040966e+00,
+        3.97150454e+00,  3.27091875e+00,  7.27455013e+00,  1.92864061e+00,
+        5.97309929e+00,  6.55674416e+00,  1.66867206e+00,  3.13852671e+00,
+        3.82657827e+00,  4.04456955e+00,  4.93205163e+00,  4.92526433e+00,
+        9.20940572e+00,  1.05227867e+00,  1.45292148e+00,  2.28952847e+00,
+        7.10767407e+00,  2.32461727e+00,  5.05911444e+00,  1.35119441e+00,
+        9.84382437e-02,  1.54314311e+00,  6.72996939e+00,  2.01686095e+00,
+        4.34896839e+00,  4.63173119e+00,  7.29711007e+00,  2.08802905e+00,
+        7.06354166e+00,  4.99399474e-01,  9.69635304e+00,  6.39985474e+00,
+        9.02285606e+00,  5.22201666e+00,  7.29418327e+00, -2.71600364e-01,
+        3.95470555e+00,  1.22034104e-01,  1.81393332e+00,  7.49457145e-01,
+        2.68179934e+00,  6.07216200e+00,  1.59089577e+00,  7.01227244e+00,
+        4.44057902e+00,  3.49825789e+00,  4.23226519e+00, -6.05365989e-01,
+        6.94749475e+00,  9.60990459e+00,  4.10654835e+00,  6.99283145e+00,
+        2.17480924e+00,  6.51224645e+00,  1.85981809e+00,  2.51350814e+00,
+        5.06171968e+00, -4.88474316e-01,  7.83386779e+00,  6.44339210e-02])</code></pre>
+</div>
+</div>
+<div id="618c20a4" class="cell" data-executetime="{&quot;end_time&quot;:&quot;2024-05-13T11:58:48.983624Z&quot;,&quot;start_time&quot;:&quot;2024-05-13T11:58:48.815534Z&quot;}" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>fontsize<span class="op">=</span><span class="dv">12</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>metawidth<span class="op">=</span><span class="fl">0.5</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>xlabel<span class="op">=</span><span class="st">'O3'</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>ylabel<span class="op">=</span><span class="st">'PM2.5'</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>fig,axs<span class="op">=</span>plot.subplots(refwidth<span class="op">=</span><span class="fl">2.5</span>,refheight<span class="op">=</span><span class="fl">2.5</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>fig.<span class="bu">format</span>(abc<span class="op">=</span><span class="va">False</span>,suptitlesize<span class="op">=</span><span class="dv">20</span>,xlim<span class="op">=</span>(<span class="dv">0</span>,<span class="dv">10</span>),ylim<span class="op">=</span>(<span class="dv">0</span>,<span class="dv">10</span>),xlabel<span class="op">=</span>xlabel</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>           ,ylabel<span class="op">=</span>ylabel</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>           ,grid<span class="op">=</span><span class="va">False</span>,xtickminor<span class="op">=</span><span class="va">False</span>,ytickminor<span class="op">=</span><span class="va">False</span>,metawidth<span class="op">=</span>metawidth,labelsize<span class="op">=</span>fontsize<span class="co">#,xlabelpad=10</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>           ,xlocator<span class="op">=</span><span class="dv">2</span>,ylocator<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>ax<span class="op">=</span>axs[<span class="dv">0</span>]</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>ax,m<span class="op">=</span>density_scatter(x[::<span class="dv">1</span>],y[::<span class="dv">1</span>] ,ax<span class="op">=</span>ax, s<span class="op">=</span><span class="dv">10</span>,bins<span class="op">=</span>(<span class="dv">500</span>, <span class="dv">500</span>),color<span class="op">=</span><span class="st">'#2f7fc1'</span>,alpha<span class="op">=</span><span class="dv">1</span><span class="co">#'rainbow'</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>              ,percent<span class="op">=</span><span class="dv">80</span> )</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 拟合线性回归线</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>slope, intercept <span class="op">=</span> np.polyfit(x,y, <span class="dv">1</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>x0<span class="op">=</span>np.arange(<span class="dv">0</span>,<span class="fl">10e16</span>,<span class="fl">1e16</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>regression_line <span class="op">=</span> slope <span class="op">*</span> x0 <span class="op">+</span> intercept</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 在图表中标注线性拟合的公式</span></span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>equation <span class="op">=</span> <span class="ss">f'Y = </span><span class="sc">{</span>slope<span class="sc">:.2f}</span><span class="ss">X + </span><span class="sc">{</span>intercept<span class="sc">:.2e}</span><span class="ss">'</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.annotate(equation, xy=(x.mean(), y[::10].mean()), fontsize=10, color='r'</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a><span class="co">#           ,bbox=dict(boxstyle="round,pad=0.3", edgecolor="none", facecolor="white"))</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>l2<span class="op">=</span>ax.plot(x0, regression_line, color<span class="op">=</span><span class="st">'red'</span>,label<span class="op">=</span>equation,lw<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.plot(x0, x0, color='grey',lw=1,linestyle='--')</span></span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>ax.legend([l2],loc<span class="op">=</span><span class="st">'ul'</span>,frameon<span class="op">=</span><span class="va">False</span>,prop<span class="op">=</span><span class="bu">dict</span>(size<span class="op">=</span>fontsize))</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>ax.text(<span class="fl">0.1</span>,<span class="fl">0.8</span>,<span class="ss">f'R=</span><span class="sc">{</span>R<span class="sc">:.2f}</span><span class="ss">'</span></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>        ,fontweight<span class="op">=</span><span class="st">'bold'</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>        ,fontsize<span class="op">=</span>fontsize, transform<span class="op">=</span>ax.transAxes)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a><span class="co"># ax.text(0.1,0.7,f'MAPE={mape:.2%}'</span></span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a><span class="co">#         ,fontweight='bold'</span></span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="co">#         ,fontsize=fontsize, transform=ax.transAxes)</span></span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a><span class="co"># ax.text(0.9,0.2,f'Daily'</span></span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a><span class="co">#         ,fontweight='bold',color='grey',horizontalalignment='right',  # 水平居中</span></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="co">#         verticalalignment='center'  # 垂直居中</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a><span class="co">#         ,fontsize=fontsize, transform=ax.transAxes)</span></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>ax.yaxis.offsetText.set_fontsize(fontsize)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>ax.xaxis.offsetText.set_fontsize(fontsize)</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'top'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>ax.spines[<span class="st">'right'</span>].set_visible(<span class="va">False</span>)</span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>fig.<span class="bu">format</span>(labelsize<span class="op">=</span>fontsize,ticklabelsize<span class="op">=</span>fontsize,title<span class="op">=</span><span class="st">''</span>,titlesize<span class="op">=</span>fontsize)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="ustc_plot_Anhuimap_files/figure-html/cell-3-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="相关性散点图_files/figure-html/cell-6-output-1.png" width="320" height="314" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -844,14 +912,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notebooks/wrf_extract_wind.html" class="pagination-link" aria-label="wrf_extract_wind">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">wrf_extract_wind</span>
+      <a href="../notebooks/ustc_plot_Anhuimap.html" class="pagination-link" aria-label="plot_ustc_Anhuimap">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">plot_ustc_Anhuimap</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notebooks/相关性散点图.html" class="pagination-link" aria-label="plot_相关性散点图">
-        <span class="nav-page-text">plot_相关性散点图</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

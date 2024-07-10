@@ -41,20 +41,23 @@ website:
     contents:
       - text: "Introduction"
         href: introduction.qmd
-      - section: "Basics"
+      - section: "基础"
         href: basics-summary.qmd
         contents:
           - index.qmd
           - basics-knitr.qmd
           - basics-jupyter.qmd
-      - section: "Layout"
+      - section: "画图"
         contents:
-          - text: "Notebook"
+          - text: "wrf_extract_wind"
             href: notebooks/wrf_extract_wind.ipynb
 
-          - text: "Notebook2"
-            href: notebooks/ustc_plot_Anhuimap.ipynb          
-      - section: advanced.qmd
+          - text: "plot_ustc_Anhuimap"
+            href: notebooks/ustc_plot_Anhuimap.ipynb  
+          - text: "plot_相关性散点图"
+            href: notebooks/相关性散点图.ipynb         
+      
+      - section: "数据处理"
         contents:
           - raw-code.qmd
           - custom-theme.qmd
