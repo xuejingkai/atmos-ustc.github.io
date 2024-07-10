@@ -7,6 +7,7 @@ cd D:/quarto/ustc
 # git init
 # git remote remove origin
 # git remote add origin https://github.com/xuejingkai/kk-atmos.github.io.git
+#git config --global -l  查看全局
 
 # 渲染网站
 quarto render

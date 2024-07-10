@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs
+  #output-dir: docs
 
 # website:
 #   title: "My Quarto Website"
@@ -45,7 +45,7 @@ website:
         href: basics-summary.qmd
         contents:
           - index.qmd
-          - basics-knitr.qmd
+          - python.qmd
           - basics-jupyter.qmd
       - section: "画图"
         contents:
@@ -55,7 +55,7 @@ website:
           - text: "plot_ustc_Anhuimap"
             href: notebooks/ustc_plot_Anhuimap.ipynb  
           - text: "plot_相关性散点图"
-            href: notebooks/相关性散点图.ipynb         
+            href: notebooks/相关性散点图.ipynb  
       
       - section: "数据处理"
         contents:
