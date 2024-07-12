@@ -55,6 +55,37 @@
     ]
   },
   {
+    "objectID": "linux.html",
+    "href": "linux.html",
+    "title": "ustc",
+    "section": "",
+    "text": "实现免密登陆： https://www.runoob.com/w3cnote/set-ssh-login-key.html\nlinux本地连接远程linux服务器：\nssh-copy-id -i ~/.ssh/id_rsa.pub user@123.45.67.89\nwindows的cmd与linux免密 可实现普通ssh 直接访问，跳过动态验证\ncat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 \"cat &gt;&gt; ~/.ssh/authorized_keys\"\n或在“终端管理员”内输入：\nfunction ssh-copy-id([string]$userAtMachine, $args){   \n    $publicKey = \"$ENV:USERPROFILE\" + \"/.ssh/id_rsa.pub\"\n    if (!(Test-Path \"$publicKey\")){\n        Write-Error \"ERROR: failed to open ID file '$publicKey': No such file\"            \n    }\n    else {\n        & cat \"$publicKey\" | ssh $args $userAtMachine \"umask 077; test -d .ssh || mkdir .ssh ; cat &gt;&gt; .ssh/authorized_keys || exit 1\"      \n    }\n}\n之后可以：\nssh-copy-id -i ~/.ssh/id_rsa.pub user@123.45.67.89",
+    "crumbs": [
+      "Home",
+      "基础",
+      "linux"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ustc",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.",
+    "crumbs": [
+      "Home",
+      "基础",
+      "ustc"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
     "objectID": "introduction.html",
     "href": "introduction.html",
     "title": "进入课题组须知",
@@ -96,25 +127,6 @@
     "crumbs": [
       "Home",
       "Introduction"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ustc",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.",
-    "crumbs": [
-      "Home",
-      "基础",
-      "ustc"
     ]
   },
   {

@@ -1,0 +1,36 @@
+
+实现免密登陆：
+https://www.runoob.com/w3cnote/set-ssh-login-key.html
+
+
+linux本地连接远程linux服务器：
+
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@123.45.67.89
+```
+
+windows的cmd与linux免密
+可实现普通ssh 直接访问，跳过动态验证
+
+```bash
+cat ~/.ssh/id_rsa.pub | ssh user@123.45.67.89 "cat >> ~/.ssh/authorized_keys"
+```
+
+或在“终端管理员”内输入：
+
+
+```bash
+function ssh-copy-id([string]$userAtMachine, $args){   
+    $publicKey = "$ENV:USERPROFILE" + "/.ssh/id_rsa.pub"
+    if (!(Test-Path "$publicKey")){
+        Write-Error "ERROR: failed to open ID file '$publicKey': No such file"            
+    }
+    else {
+        & cat "$publicKey" | ssh $args $userAtMachine "umask 077; test -d .ssh || mkdir .ssh ; cat >> .ssh/authorized_keys || exit 1"      
+    }
+}
+```
+之后可以：
+```bash
+ssh-copy-id -i ~/.ssh/id_rsa.pub user@123.45.67.89
+```

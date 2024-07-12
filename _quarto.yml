@@ -46,6 +46,8 @@ website:
         contents:
           - index.qmd
           - python.qmd
+          - text: "linux"
+            href: linux.qmd          
 
       - section: "画图"
         contents:
@@ -55,7 +57,7 @@ website:
             href: notebooks/extractwrf_LC.ipynb
           - text: "extract_wrfchem_区域变量（近地面、柱浓度）"
             href: notebooks/extract_wrfchem.ipynb
-            
+
           - text: "create_wrf_meic清单"
             href: notebooks/create_meic.ipynb
 
