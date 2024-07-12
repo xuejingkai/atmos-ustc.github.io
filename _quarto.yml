@@ -46,17 +46,33 @@ website:
         contents:
           - index.qmd
           - python.qmd
-          - basics-jupyter.qmd
+
       - section: "画图"
         contents:
-          - text: "wrf_extract_wind"
+          - text: "extract_wrf_站点wind"
             href: notebooks/wrf_extract_wind.ipynb
+          - text: "extract_wrf_区域多种变量"
+            href: notebooks/extractwrf_LC.ipynb
+          - text: "extract_wrfchem_区域变量（近地面、柱浓度）"
+            href: notebooks/extract_wrfchem.ipynb
+            
+          - text: "create_wrf_meic清单"
+            href: notebooks/create_meic.ipynb
 
-          - text: "plot_ustc_Anhuimap"
+ 
+
+
+
+          - text: "plot_ustc_Anhui_map模板"
             href: notebooks/ustc_plot_Anhuimap.ipynb  
+          - text: "plot_ustc_Hefei_map模板"
+            href: notebooks/ustc_plot_Hefeimap.ipynb              
           - text: "plot_相关性散点图"
-            href: notebooks/相关性散点图.ipynb  
-      
+            href: notebooks/相关性散点图.ipynb 
+          - text: "plot_global_map模板" 
+            href: notebooks/globalmap_v2.ipynb 
+
+
       - section: "数据处理"
         contents:
           - raw-code.qmd

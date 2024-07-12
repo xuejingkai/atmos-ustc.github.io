@@ -23,6 +23,8 @@ date: "2024-07-10"
 
 
 
+
+
 ## 1.2 基本命令
 
 以下是一些常用的服务器命令：
@@ -46,5 +48,10 @@ date: "2024-07-10"
 ```python
 print("Hello, World!")
 ```
+
+
+### 课题组数据
+【腾讯文档】数据
+https://docs.qq.com/sheet/DUXhqVElDWVJid05Y?tab=BB08J2
 
 关于github pages使用参考https://segmentfault.com/a/1190000022272311

@@ -64,8 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notebooks/相关性散点图.html" rel="next">
-<link href="../notebooks/wrf_extract_wind.html" rel="prev">
+<link href="../notebooks/ustc_plot_Hefeimap.html" rel="next">
+<link href="../notebooks/create_meic.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -160,7 +160,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/wrf_extract_wind.html">画图</a></li><li class="breadcrumb-item"><a href="../notebooks/ustc_plot_Anhuimap.html">plot_ustc_Anhuimap</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/wrf_extract_wind.html">画图</a></li><li class="breadcrumb-item"><a href="../notebooks/ustc_plot_Anhuimap.html">plot_ustc_Anhui_map模板</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -225,9 +225,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">这是 H1</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
- <span class="menu-text">basics-jupyter.qmd</span>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -242,19 +239,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/wrf_extract_wind.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">wrf_extract_wind</span></a>
+ <span class="menu-text">extract_wrf_站点wind</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/extractwrf_LC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">extract_wrf_区域多种变量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/extract_wrfchem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">extract_wrfchem_区域变量（近地面、柱浓度）</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/create_meic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">create_wrf_meic清单</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/ustc_plot_Anhuimap.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">plot_ustc_Anhuimap</span></a>
+ <span class="menu-text">plot_ustc_Anhui_map模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/ustc_plot_Hefeimap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_ustc_Hefei_map模板</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../notebooks/相关性散点图.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">plot_相关性散点图</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/globalmap_v2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_global_map模板</span></a>
   </div>
 </li>
       </ul>
@@ -847,13 +874,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notebooks/wrf_extract_wind.html" class="pagination-link" aria-label="wrf_extract_wind">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">wrf_extract_wind</span>
+      <a href="../notebooks/create_meic.html" class="pagination-link" aria-label="create_wrf_meic清单">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">create_wrf_meic清单</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notebooks/相关性散点图.html" class="pagination-link" aria-label="plot_相关性散点图">
-        <span class="nav-page-text">plot_相关性散点图</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notebooks/ustc_plot_Hefeimap.html" class="pagination-link" aria-label="plot_ustc_Hefei_map模板">
+        <span class="nav-page-text">plot_ustc_Hefei_map模板</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
