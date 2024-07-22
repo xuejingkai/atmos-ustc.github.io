@@ -74,6 +74,15 @@ website:
           - text: "plot_global_map模板" 
             href: notebooks/globalmap_v2.ipynb 
 
+          - text: "plot_棒棒糖图" 
+            href: https://www.tvhahn.com/posts/beautiful-plots-lollipop/
+
+
+      - section: "AI"
+        contents:
+          - text: "人工智能时间序列预测" 
+            href: https://github.com/thuml/Time-Series-Library/blob/main/tutorial/TimesNet_tutorial.ipynb
+
 
       - section: "数据处理"
         contents:
