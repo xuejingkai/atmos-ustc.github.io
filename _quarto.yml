@@ -61,9 +61,11 @@ website:
           - text: "create_wrf_meic清单"
             href: notebooks/create_meic.ipynb
 
- 
+          - text: "plot_国控点臭氧"
+            href: notebooks/国控站点画到地图上.ipynb
 
-
+          - text: "plot_cartopy_map模板" 
+            href: notebooks/cartopymap.ipynb 
 
           - text: "plot_ustc_Anhui_map模板"
             href: notebooks/ustc_plot_Anhuimap.ipynb  
@@ -86,7 +88,8 @@ website:
 
       - section: "数据处理"
         contents:
-          - raw-code.qmd
+          - text: "era5数据" 
+            href: notebooks/处理era5_1.ipynb 
           - custom-theme.qmd
       - acknowlegment.qmd
     tools:

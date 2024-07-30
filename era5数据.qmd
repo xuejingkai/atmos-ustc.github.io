@@ -1,0 +1,17 @@
+
+mix ERA5 and ERA5T data netCDF new dimension expver
+
+```python
+print("Hello, World!")
+import xarray as xr
+import numpy as np
+import metpy
+ds1=xr.open_dataset('./1.nc')
+ds2=xr.open_dataset('./2.nc')
+
+ds=xr.concat([ds2,ds1.sel(expver=1).combine_first(ds1.sel(expver=5))],dim='time')
+
+```
+
+ds1.sel(expver=1).combine_first(
+    ds1.sel(expver=5)).u10[:,0,0].plot()
