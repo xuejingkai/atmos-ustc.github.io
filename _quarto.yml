@@ -73,6 +73,9 @@ website:
             href: notebooks/ustc_plot_Hefeimap.ipynb              
           - text: "plot_相关性散点图"
             href: notebooks/相关性散点图.ipynb 
+          - text: "plot_R2散点图"
+            href: notebooks/validation验证散点图R2.ipynb 
+
           - text: "plot_global_map模板" 
             href: notebooks/globalmap_v2.ipynb 
 
