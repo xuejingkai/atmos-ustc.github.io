@@ -63,6 +63,8 @@ website:
 
           - text: "plot_国控点臭氧"
             href: notebooks/国控站点画到地图上.ipynb
+          - text: "plot_国控点"
+            href: notebooks/国控站点提取.ipynb
 
           - text: "plot_cartopy_map模板" 
             href: notebooks/cartopymap.ipynb 

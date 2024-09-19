@@ -1,0 +1,3773 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.54">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inputae1274322c5ac3df – ustc</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../notebooks/cartopymap.html" rel="next">
+<link href="../notebooks/国控站点画到地图上.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">ustc</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../tutorials.qmd"> 
+<span class="menu-text">Tutorials</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../howto.qmd"> 
+<span class="menu-text">How-To</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../fundamentals.qmd"> 
+<span class="menu-text">Fundamentals</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../reference.qmd"> 
+<span class="menu-text">Reference</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notebooks/wrf_extract_wind.html">画图</a></li><li class="breadcrumb-item"><a href="../notebooks/国控站点提取.html">plot_国控点</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+        <div class="sidebar-tools-collapse">
+    <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter"></i></a>
+    <div class="dropdown">
+      <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-collapse-item" href="https://code.com">
+            Source Code
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-collapse-item" href="https://bugs.com">
+            Report a Bug
+            </a>
+          </li>
+      </ul>
+    </div>
+</div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../introduction.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../basics-summary.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">基础</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ustc</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">这是 H1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../linux.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">linux</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">画图</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/wrf_extract_wind.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">extract_wrf_站点wind</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/extractwrf_LC.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">extract_wrf_区域多种变量</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/extract_wrfchem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">extract_wrfchem_区域变量（近地面、柱浓度）</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/create_meic.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">create_wrf_meic清单</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/国控站点画到地图上.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_国控点臭氧</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/国控站点提取.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">plot_国控点</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/cartopymap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_cartopy_map模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/ustc_plot_Anhuimap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_ustc_Anhui_map模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/ustc_plot_Hefeimap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_ustc_Hefei_map模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/相关性散点图.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_相关性散点图</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/validation验证散点图R2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_R2散点图</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/globalmap_v2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_global_map模板</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://www.tvhahn.com/posts/beautiful-plots-lollipop/" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">plot_棒棒糖图</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">AI</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="https://github.com/thuml/Time-Series-Library/blob/main/tutorial/TimesNet_tutorial.ipynb" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">人工智能时间序列预测</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">数据处理</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notebooks/处理era5_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">era5数据</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+ <span class="menu-text">custom-theme.qmd</span>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+ <span class="menu-text">acknowlegment.qmd</span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+
+<div id="38861280" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>time</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> proplot <span class="im">as</span> plot</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cmaps</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> salem</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> cartopy.mpl.ticker <span class="im">import</span> LongitudeFormatter, LatitudeFormatter</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> ticker, cm</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> getchinamap.getchinamap <span class="im">import</span> DownloadChmap</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>chinamap_engine <span class="op">=</span> DownloadChmap()<span class="co">#(adcode_file='/home/xuejingkai/data/down/AMap_adcode_citycode_20210406.csv')</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>provinces <span class="op">=</span> chinamap_engine.download_country(target<span class="op">=</span><span class="st">'省'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>plot.rc[<span class="st">'figure.facecolor'</span>] <span class="op">=</span> <span class="st">'white'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>&lt;frozen importlib._bootstrap&gt;:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CPU times: user 1.87 s, sys: 854 ms, total: 2.72 s
+Wall time: 3.02 s</code></pre>
+</div>
+</div>
+<div id="8e8a92f2" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>timedt<span class="op">=</span>pd.date_range(<span class="st">'20240101'</span>,<span class="st">'20240102'</span>,freq<span class="op">=</span><span class="st">'1D'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a6546f09" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>L<span class="op">=</span>[glob.glob(<span class="ss">f'/exports/d4/xuejingkai/down/guokongzhandian/china_sites_</span><span class="sc">{</span>t<span class="sc">.</span>strftime(<span class="st">"%Y%m</span><span class="sc">%d</span><span class="st">"</span>)<span class="sc">}</span><span class="ss">*'</span>)[<span class="dv">0</span>] <span class="cf">for</span> t <span class="kw">in</span> timedt]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0006d532" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># #L=glob.glob(f'/exports/d4/xuejingkai/down/guokongzhandian/china_sites_{timedt[0].strftime("%Y%m%d")}*')</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># L=[glob.glob(f'/exports/d4/xuejingkai/down/guokongzhandian/china_sites_{t.strftime("%Y%m%d")}*')[0] for t in timedt]</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># L.sort()</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># sites=pd.read_excel('/exports/d4/xuejingkai/guokongzhan_nc/sites.xlsx')</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># sites.columns=['id','name','city','lon','lat','p']</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># sites['lon'] = sites['lon'].replace('-', np.nan)</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># sites.dropna(subset=['lon'], inplace=True)</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># sites['lat']=sites.lat.astype(float)</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># D=[]</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># times=[]</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co"># for l in L[:]:</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">#     df=pd.read_csv(l)</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">#     # 将"date"列转换为字符串，并保留8个字符（年月日）</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co">#     #df["date"] = df["date"].astype(str).str[:8]</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">#     # 将"hour"列转换为字符串，并保留2个字符（小时）</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">#     #df["hour"] = df["hour"].astype(str).str.zfill(2)</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a><span class="co">#     # 将"date"和"hour"列相加，并使用to_datetime函数将其转换为datetime格式</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a><span class="co">#     df["date"] = pd.to_datetime(df["date"].astype(str).str[:8] + df["hour"].astype(str).str.zfill(2), format="%Y%m%d%H")</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co">#     for n in range(23,24):  #一般是23点的O3是当天的O3_8h_24h</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co">#         try:</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co">#             dfq=df.query(f"type == 'O3_8h_24h' and hour == {df.hour.max()}")</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co">#             timedt0=dfq['date']</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co">#             timedt0=pd.to_datetime(timedt0.values[0])</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co">#             d1=dfq.T.reset_index().iloc[3:]</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co">#             #d2.rename({'index':'h'})</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co">#             d1.columns=['id','value']</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a><span class="co">#             d1['value']=d1.value.astype(float)</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co">#             d2=pd.merge(sites,d1,how='left')</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a><span class="co">#             lat=d2.lat.values</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a><span class="co">#             lon=d2.lon.values</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a><span class="co">#             vcd=d2.value.values</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a><span class="co">#             slat=d2.lat.values</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a><span class="co">#             slon=d2.lon.values</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a><span class="co">#             D.append(vcd)</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a><span class="co">#             times.append(timedt0)</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a><span class="co">#             print(l)</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a><span class="co">#         except:</span></span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a><span class="co">#             pass</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="e3fb53cb" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">#L=glob.glob(f'/exports/d4/xuejingkai/down/guokongzhandian/china_sites_{timedt[0].strftime("%Y%m%d")}*')</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>L<span class="op">=</span>[glob.glob(<span class="ss">f'/exports/d4/xuejingkai/down/guokongzhandian/china_sites_</span><span class="sc">{</span>t<span class="sc">.</span>strftime(<span class="st">"%Y%m</span><span class="sc">%d</span><span class="st">"</span>)<span class="sc">}</span><span class="ss">*'</span>)[<span class="dv">0</span>] <span class="cf">for</span> t <span class="kw">in</span> timedt]</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>L.sort()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>sites<span class="op">=</span>pd.read_excel(<span class="st">'/exports/d4/xuejingkai/guokongzhan_nc/sites.xlsx'</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>sites.columns<span class="op">=</span>[<span class="st">'id'</span>,<span class="st">'name'</span>,<span class="st">'city'</span>,<span class="st">'lon'</span>,<span class="st">'lat'</span>,<span class="st">'p'</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sites[<span class="st">'lon'</span>] <span class="op">=</span> sites[<span class="st">'lon'</span>].replace(<span class="st">'-'</span>, np.nan)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>sites.dropna(subset<span class="op">=</span>[<span class="st">'lon'</span>], inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>sites[<span class="st">'lat'</span>]<span class="op">=</span>sites.lat.astype(<span class="bu">float</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>D<span class="op">=</span>[]</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>times<span class="op">=</span>[]</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> l <span class="kw">in</span> L[:]:</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    df<span class="op">=</span>pd.read_csv(l)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 将"date"列转换为字符串，并保留8个字符（年月日）</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df["date"] = df["date"].astype(str).str[:8]</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 将"hour"列转换为字符串，并保留2个字符（小时）</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="co">#df["hour"] = df["hour"].astype(str).str.zfill(2)</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 将"date"和"hour"列相加，并使用to_datetime函数将其转换为datetime格式</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">"date"</span>] <span class="op">=</span> pd.to_datetime(df[<span class="st">"date"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>[:<span class="dv">8</span>] <span class="op">+</span> df[<span class="st">"hour"</span>].astype(<span class="bu">str</span>).<span class="bu">str</span>.zfill(<span class="dv">2</span>), <span class="bu">format</span><span class="op">=</span><span class="st">"%Y%m</span><span class="sc">%d</span><span class="st">%H"</span>)</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">24</span>):  <span class="co">#一般是23点的O3是当天的O3_8h_24h</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>            dfq<span class="op">=</span>df.query(<span class="ss">f"type == 'PM10' and hour == </span><span class="sc">{</span>n<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>            timedt0<span class="op">=</span>dfq[<span class="st">'date'</span>]</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>            timedt0<span class="op">=</span>pd.to_datetime(timedt0.values[<span class="dv">0</span>])</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>            d1<span class="op">=</span>dfq.T.reset_index().iloc[<span class="dv">3</span>:]</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>            <span class="co">#d2.rename({'index':'h'})</span></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>            d1.columns<span class="op">=</span>[<span class="st">'id'</span>,<span class="st">'value'</span>]</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>            d1[<span class="st">'value'</span>]<span class="op">=</span>d1.value.astype(<span class="bu">float</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>            d2<span class="op">=</span>pd.merge(sites,d1,how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>            lat<span class="op">=</span>d2.lat.values</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>            lon<span class="op">=</span>d2.lon.values</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>            vcd<span class="op">=</span>d2.value.values</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>            slat<span class="op">=</span>d2.lat.values</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>            slon<span class="op">=</span>d2.lon.values</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>            D.append(vcd)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>            times.append(timedt0)</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(l,<span class="st">'  hour:'</span>,n)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span>:</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>            <span class="cf">pass</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 0
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 1
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 2
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 3
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 4
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 5
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 6
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 7
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 8
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 9
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 10
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 11
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 12
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 13
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 14
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 15
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 16
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 17
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 18
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 19
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 20
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 21
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 22
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240101.csv   hour: 23
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 0
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 1
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 2
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 3
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 4
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 5
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 6
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 7
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 8
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 9
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 10
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 11
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 12
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 13
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 14
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 15
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 16
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 17
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 18
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 19
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 20
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 21
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 22
+/exports/d4/xuejingkai/down/guokongzhandian/china_sites_20240102.csv   hour: 23</code></pre>
+</div>
+</div>
+<div id="d7bddce8" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dss<span class="op">=</span>xr.DataArray(np.array(D)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                    ,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        coords<span class="op">=</span>{</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">'time'</span>:times,<span class="co">#times,#timedt[n1:n2],</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">'point'</span>:np.arange(np.array(D).shape[<span class="dv">1</span>]),</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        },</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        dims<span class="op">=</span>[<span class="st">'time'</span>,<span class="st">'point'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9fde236b" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Dss<span class="op">=</span>dss.to_dataset(name<span class="op">=</span><span class="st">'c'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>Dss[<span class="st">'lat'</span>] <span class="op">=</span> ((<span class="st">'point'</span>,), d2.lat)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>Dss[<span class="st">'lon'</span>] <span class="op">=</span> ((<span class="st">'point'</span>,), d2.lon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="9f065b6d" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Dss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt;
+Dimensions:  (time: 48, point: 2016)
+Coordinates:
+  * time     (time) datetime64[ns] 2024-01-01 ... 2024-01-02T23:00:00
+  * point    (point) int64 0 1 2 3 4 5 6 ... 2009 2010 2011 2012 2013 2014 2015
+Data variables:
+    c        (time, point) float64 49.0 28.0 72.0 52.0 ... 263.0 271.0 56.0
+    lat      (point) float64 39.88 40.29 39.93 39.89 ... 35.03 36.77 40.66 36.51
+    lon      (point) float64 116.4 116.2 116.4 116.4 ... 118.4 119.2 122.2 102.1</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input id="section-03088d9e-9861-41d7-9b60-51e77f8fbd27" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-03088d9e-9861-41d7-9b60-51e77f8fbd27" class="xr-section-summary" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 48</li><li><span class="xr-has-index">point</span>: 2016</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input id="section-58bad5ed-de0e-4a8e-8526-a8b21bd9f1d3" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-58bad5ed-de0e-4a8e-8526-a8b21bd9f1d3" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2024-01-01 ... 2024-01-02T23:00:00</div><input id="attrs-a1d41855-df14-4bb2-917d-833abea673a7" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-a1d41855-df14-4bb2-917d-833abea673a7" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-e70f2736-30a0-4368-b088-774d672d74ef" class="xr-var-data-in" type="checkbox"><label for="data-e70f2736-30a0-4368-b088-774d672d74ef" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2024-01-01T00:00:00.000000000', '2024-01-01T01:00:00.000000000',
+       '2024-01-01T02:00:00.000000000', '2024-01-01T03:00:00.000000000',
+       '2024-01-01T04:00:00.000000000', '2024-01-01T05:00:00.000000000',
+       '2024-01-01T06:00:00.000000000', '2024-01-01T07:00:00.000000000',
+       '2024-01-01T08:00:00.000000000', '2024-01-01T09:00:00.000000000',
+       '2024-01-01T10:00:00.000000000', '2024-01-01T11:00:00.000000000',
+       '2024-01-01T12:00:00.000000000', '2024-01-01T13:00:00.000000000',
+       '2024-01-01T14:00:00.000000000', '2024-01-01T15:00:00.000000000',
+       '2024-01-01T16:00:00.000000000', '2024-01-01T17:00:00.000000000',
+       '2024-01-01T18:00:00.000000000', '2024-01-01T19:00:00.000000000',
+       '2024-01-01T20:00:00.000000000', '2024-01-01T21:00:00.000000000',
+       '2024-01-01T22:00:00.000000000', '2024-01-01T23:00:00.000000000',
+       '2024-01-02T00:00:00.000000000', '2024-01-02T01:00:00.000000000',
+       '2024-01-02T02:00:00.000000000', '2024-01-02T03:00:00.000000000',
+       '2024-01-02T04:00:00.000000000', '2024-01-02T05:00:00.000000000',
+       '2024-01-02T06:00:00.000000000', '2024-01-02T07:00:00.000000000',
+       '2024-01-02T08:00:00.000000000', '2024-01-02T09:00:00.000000000',
+       '2024-01-02T10:00:00.000000000', '2024-01-02T11:00:00.000000000',
+       '2024-01-02T12:00:00.000000000', '2024-01-02T13:00:00.000000000',
+       '2024-01-02T14:00:00.000000000', '2024-01-02T15:00:00.000000000',
+       '2024-01-02T16:00:00.000000000', '2024-01-02T17:00:00.000000000',
+       '2024-01-02T18:00:00.000000000', '2024-01-02T19:00:00.000000000',
+       '2024-01-02T20:00:00.000000000', '2024-01-02T21:00:00.000000000',
+       '2024-01-02T22:00:00.000000000', '2024-01-02T23:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">point</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 ... 2012 2013 2014 2015</div><input id="attrs-2201f606-a534-4eac-9b27-90b088b504b4" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-2201f606-a534-4eac-9b27-90b088b504b4" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-f70b667f-fdd2-47e0-9517-429fabac360f" class="xr-var-data-in" type="checkbox"><label for="data-f70b667f-fdd2-47e0-9517-429fabac360f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([   0,    1,    2, ..., 2013, 2014, 2015])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-7966d6e0-b349-46f1-82ee-4b7951bf719e" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-7966d6e0-b349-46f1-82ee-4b7951bf719e" class="xr-section-summary">Data variables: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>c</span></div><div class="xr-var-dims">(time, point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">49.0 28.0 72.0 ... 263.0 271.0 56.0</div><input id="attrs-58bf6958-590f-442f-80af-b9db35873016" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-58bf6958-590f-442f-80af-b9db35873016" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-a8d4a61d-ee02-4ecd-978c-48c507ea5a0f" class="xr-var-data-in" type="checkbox"><label for="data-a8d4a61d-ee02-4ecd-978c-48c507ea5a0f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[ 49.,  28.,  72., ...,  70.,  52.,  85.],
+       [ 76.,  26.,  85., ...,  73.,  58.,  87.],
+       [ 88.,  25.,  97., ...,  61.,  58.,  77.],
+       ...,
+       [ 52.,   7.,  17., ..., 259., 197.,  74.],
+       [ 14.,   7.,   9., ..., 261., 254.,  75.],
+       [  7.,   7.,   8., ..., 263., 271.,  56.]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lat</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">39.88 40.29 39.93 ... 40.66 36.51</div><input id="attrs-2d526563-ad6b-4e30-b18d-9ea4971de294" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-2d526563-ad6b-4e30-b18d-9ea4971de294" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-7cd08eff-f8b7-4ee5-9d57-679677187324" class="xr-var-data-in" type="checkbox"><label for="data-7cd08eff-f8b7-4ee5-9d57-679677187324" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([39.8784 , 40.2915 , 39.9289 , ..., 36.7699 , 40.66302, 36.5056 ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lon</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">116.4 116.2 116.4 ... 122.2 102.1</div><input id="attrs-5fa11e5c-9b4f-4f8d-a5f3-3886adc2c91f" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-5fa11e5c-9b4f-4f8d-a5f3-3886adc2c91f" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-6eff39f4-87ee-4d7b-91b9-7eb2a529e154" class="xr-var-data-in" type="checkbox"><label for="data-6eff39f4-87ee-4d7b-91b9-7eb2a529e154" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([116.3621, 116.2202, 116.4174, ..., 119.2041, 122.2469, 102.0738])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-53731623-1281-43f9-ad14-817dbf7e64b3" class="xr-section-summary-in" type="checkbox"><label for="section-53731623-1281-43f9-ad14-817dbf7e64b3" class="xr-section-summary">Indexes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-728f8e95-2a1c-471d-ade4-4b50d9f4fb14" class="xr-index-data-in" type="checkbox"><label for="index-728f8e95-2a1c-471d-ade4-4b50d9f4fb14" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2024-01-01 00:00:00', '2024-01-01 01:00:00',
+               '2024-01-01 02:00:00', '2024-01-01 03:00:00',
+               '2024-01-01 04:00:00', '2024-01-01 05:00:00',
+               '2024-01-01 06:00:00', '2024-01-01 07:00:00',
+               '2024-01-01 08:00:00', '2024-01-01 09:00:00',
+               '2024-01-01 10:00:00', '2024-01-01 11:00:00',
+               '2024-01-01 12:00:00', '2024-01-01 13:00:00',
+               '2024-01-01 14:00:00', '2024-01-01 15:00:00',
+               '2024-01-01 16:00:00', '2024-01-01 17:00:00',
+               '2024-01-01 18:00:00', '2024-01-01 19:00:00',
+               '2024-01-01 20:00:00', '2024-01-01 21:00:00',
+               '2024-01-01 22:00:00', '2024-01-01 23:00:00',
+               '2024-01-02 00:00:00', '2024-01-02 01:00:00',
+               '2024-01-02 02:00:00', '2024-01-02 03:00:00',
+               '2024-01-02 04:00:00', '2024-01-02 05:00:00',
+               '2024-01-02 06:00:00', '2024-01-02 07:00:00',
+               '2024-01-02 08:00:00', '2024-01-02 09:00:00',
+               '2024-01-02 10:00:00', '2024-01-02 11:00:00',
+               '2024-01-02 12:00:00', '2024-01-02 13:00:00',
+               '2024-01-02 14:00:00', '2024-01-02 15:00:00',
+               '2024-01-02 16:00:00', '2024-01-02 17:00:00',
+               '2024-01-02 18:00:00', '2024-01-02 19:00:00',
+               '2024-01-02 20:00:00', '2024-01-02 21:00:00',
+               '2024-01-02 22:00:00', '2024-01-02 23:00:00'],
+              dtype='datetime64[ns]', name='time', freq=None))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>point</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-da712949-2b18-4b50-a62e-fabdd8821468" class="xr-index-data-in" type="checkbox"><label for="index-da712949-2b18-4b50-a62e-fabdd8821468" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Int64Index([   0,    1,    2,    3,    4,    5,    6,    7,    8,    9,
+            ...
+            2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+           dtype='int64', name='point', length=2016))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-f67d3c2b-194c-491d-8b6c-64c6157c5b8d" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-f67d3c2b-194c-491d-8b6c-64c6157c5b8d" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="144c0d2b" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.scatter(Dss.lon,Dss.lat,c<span class="op">=</span>Dss.c[<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="国控站点提取_files/figure-html/cell-10-output-1.png" width="400" height="400" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="8070e9dc" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义经纬度范围</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>lon <span class="op">=</span> np.arange(<span class="dv">80</span>, <span class="dv">140</span>,<span class="fl">0.2</span>)  <span class="co"># 例如从100°E到120°E，分成50个点</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> np.arange(<span class="dv">20</span>, <span class="dv">60</span>, <span class="fl">0.2</span>)    <span class="co"># 例如从20°N到40°N，分成30个点</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成随机数据</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.full((<span class="bu">len</span>(lat), <span class="bu">len</span>(lon)),np.nan)  <span class="co"># 大小为 (lat, lon)</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个 xarray DataArray</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>dstemp <span class="op">=</span> xr.DataArray(data, </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                          coords<span class="op">=</span>{<span class="st">'lat'</span>: lat, <span class="st">'lon'</span>: lon}, </span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                          dims<span class="op">=</span>[<span class="st">'lat'</span>, <span class="st">'lon'</span>], </span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                          name<span class="op">=</span><span class="st">'dstemp'</span>)</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>dstemp </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'dstemp' (lat: 200, lon: 300)&gt;
+array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])
+Coordinates:
+  * lat      (lat) float64 20.0 20.2 20.4 20.6 20.8 ... 59.0 59.2 59.4 59.6 59.8
+  * lon      (lon) float64 80.0 80.2 80.4 80.6 80.8 ... 139.2 139.4 139.6 139.8</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'dstemp'</div><ul class="xr-dim-list"><li><span class="xr-has-index">lat</span>: 200</li><li><span class="xr-has-index">lon</span>: 300</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-ad771b04-039f-4f70-bd22-e06751b74f7c" class="xr-array-in" type="checkbox" checked=""><label for="section-ad771b04-039f-4f70-bd22-e06751b74f7c" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>nan nan nan nan nan nan nan nan ... nan nan nan nan nan nan nan nan</span></div><div class="xr-array-data"><pre>array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]])</pre></div></div></li><li class="xr-section-item"><input id="section-72f8d616-ba97-4499-a527-cee45a147841" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-72f8d616-ba97-4499-a527-cee45a147841" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lat</span></div><div class="xr-var-dims">(lat)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">20.0 20.2 20.4 ... 59.4 59.6 59.8</div><input id="attrs-d5b72579-a817-4874-a938-8788073d83d5" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-d5b72579-a817-4874-a938-8788073d83d5" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-ca8f7e3f-78a0-4f9a-87d5-b20019d9a4ce" class="xr-var-data-in" type="checkbox"><label for="data-ca8f7e3f-78a0-4f9a-87d5-b20019d9a4ce" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([20. , 20.2, 20.4, 20.6, 20.8, 21. , 21.2, 21.4, 21.6, 21.8, 22. , 22.2,
+       22.4, 22.6, 22.8, 23. , 23.2, 23.4, 23.6, 23.8, 24. , 24.2, 24.4, 24.6,
+       24.8, 25. , 25.2, 25.4, 25.6, 25.8, 26. , 26.2, 26.4, 26.6, 26.8, 27. ,
+       27.2, 27.4, 27.6, 27.8, 28. , 28.2, 28.4, 28.6, 28.8, 29. , 29.2, 29.4,
+       29.6, 29.8, 30. , 30.2, 30.4, 30.6, 30.8, 31. , 31.2, 31.4, 31.6, 31.8,
+       32. , 32.2, 32.4, 32.6, 32.8, 33. , 33.2, 33.4, 33.6, 33.8, 34. , 34.2,
+       34.4, 34.6, 34.8, 35. , 35.2, 35.4, 35.6, 35.8, 36. , 36.2, 36.4, 36.6,
+       36.8, 37. , 37.2, 37.4, 37.6, 37.8, 38. , 38.2, 38.4, 38.6, 38.8, 39. ,
+       39.2, 39.4, 39.6, 39.8, 40. , 40.2, 40.4, 40.6, 40.8, 41. , 41.2, 41.4,
+       41.6, 41.8, 42. , 42.2, 42.4, 42.6, 42.8, 43. , 43.2, 43.4, 43.6, 43.8,
+       44. , 44.2, 44.4, 44.6, 44.8, 45. , 45.2, 45.4, 45.6, 45.8, 46. , 46.2,
+       46.4, 46.6, 46.8, 47. , 47.2, 47.4, 47.6, 47.8, 48. , 48.2, 48.4, 48.6,
+       48.8, 49. , 49.2, 49.4, 49.6, 49.8, 50. , 50.2, 50.4, 50.6, 50.8, 51. ,
+       51.2, 51.4, 51.6, 51.8, 52. , 52.2, 52.4, 52.6, 52.8, 53. , 53.2, 53.4,
+       53.6, 53.8, 54. , 54.2, 54.4, 54.6, 54.8, 55. , 55.2, 55.4, 55.6, 55.8,
+       56. , 56.2, 56.4, 56.6, 56.8, 57. , 57.2, 57.4, 57.6, 57.8, 58. , 58.2,
+       58.4, 58.6, 58.8, 59. , 59.2, 59.4, 59.6, 59.8])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lon</span></div><div class="xr-var-dims">(lon)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">80.0 80.2 80.4 ... 139.6 139.8</div><input id="attrs-8186a959-afaf-46aa-85a0-64a1d94d9515" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-8186a959-afaf-46aa-85a0-64a1d94d9515" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-f8b8b7a5-d22e-41ba-8aff-fabb0cce601a" class="xr-var-data-in" type="checkbox"><label for="data-f8b8b7a5-d22e-41ba-8aff-fabb0cce601a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([ 80. ,  80.2,  80.4, ..., 139.4, 139.6, 139.8])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-ec123627-5b28-48ec-934f-d98f1158bba1" class="xr-section-summary-in" type="checkbox"><label for="section-ec123627-5b28-48ec-934f-d98f1158bba1" class="xr-section-summary">Indexes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>lat</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-a80abdac-6aaf-4c18-b511-eac4b91870be" class="xr-index-data-in" type="checkbox"><label for="index-a80abdac-6aaf-4c18-b511-eac4b91870be" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Float64Index([              20.0,               20.2,               20.4,
+              20.599999999999998, 20.799999999999997, 20.999999999999996,
+              21.199999999999996, 21.399999999999995, 21.599999999999994,
+              21.799999999999994,
+              ...
+              57.999999999999865,  58.19999999999986, 58.399999999999864,
+              58.599999999999866,  58.79999999999986,  58.99999999999986,
+               59.19999999999986, 59.399999999999864,  59.59999999999986,
+              59.799999999999855],
+             dtype='float64', name='lat', length=200))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>lon</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-5a3c651a-57f5-44ed-a37e-1739f5201eb9" class="xr-index-data-in" type="checkbox"><label for="index-5a3c651a-57f5-44ed-a37e-1739f5201eb9" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Float64Index([              80.0,               80.2,               80.4,
+               80.60000000000001,  80.80000000000001,  81.00000000000001,
+               81.20000000000002,  81.40000000000002,  81.60000000000002,
+               81.80000000000003,
+              ...
+              138.00000000000082, 138.20000000000084, 138.40000000000083,
+              138.60000000000082, 138.80000000000084, 139.00000000000085,
+              139.20000000000084, 139.40000000000083, 139.60000000000085,
+              139.80000000000086],
+             dtype='float64', name='lon', length=300))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-7feba495-4f88-4c24-8447-12a34d5bd5f1" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-7feba495-4f88-4c24-8447-12a34d5bd5f1" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="4aee9c52" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义经纬度范围</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>lon <span class="op">=</span> np.arange(<span class="dv">80</span>, <span class="dv">140</span>,<span class="fl">0.2</span>)  <span class="co"># 例如从100°E到120°E，分成50个点</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>lat <span class="op">=</span> np.arange(<span class="dv">20</span>, <span class="dv">60</span>, <span class="fl">0.2</span>)    <span class="co"># 例如从20°N到40°N，分成30个点</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 定义时间维度，1 小时频率，从 2024-01-01 到 2024-01-05</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> pd.date_range(<span class="st">'2024-01-01'</span>, <span class="st">'2024-01-02'</span>, freq<span class="op">=</span><span class="st">'1H'</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 生成随机数据，数据大小为 (时间, 纬度, 经度)</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.rand(<span class="bu">len</span>(time), <span class="bu">len</span>(lat), <span class="bu">len</span>(lon))</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 创建一个 xarray DataArray，包含时间、纬度和经度</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>dspred <span class="op">=</span> xr.DataArray(data, </span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>                          coords<span class="op">=</span>{<span class="st">'time'</span>: time, <span class="st">'lat'</span>: lat, <span class="st">'lon'</span>: lon}, </span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>                          dims<span class="op">=</span>[<span class="st">'time'</span>, <span class="st">'lat'</span>, <span class="st">'lon'</span>], </span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>                          name<span class="op">=</span><span class="st">'random_data'</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>dspred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'random_data' (time: 25, lat: 200, lon: 300)&gt;
+array([[[0.58306895, 0.89689631, 0.9637159 , ..., 0.95514166,
+         0.56327264, 0.88194912],
+        [0.91348281, 0.81313667, 0.54342915, ..., 0.15515979,
+         0.99576906, 0.98561262],
+        [0.51785201, 0.12260406, 0.48123699, ..., 0.69087278,
+         0.07149597, 0.6591239 ],
+        ...,
+        [0.26463206, 0.48345431, 0.5136062 , ..., 0.15765791,
+         0.27837659, 0.96248451],
+        [0.45114488, 0.46012199, 0.94300064, ..., 0.52183468,
+         0.95946146, 0.93688643],
+        [0.23883549, 0.13021039, 0.91995392, ..., 0.96090563,
+         0.26284885, 0.33190806]],
+
+       [[0.60097816, 0.03713862, 0.25497976, ..., 0.16130851,
+         0.09510052, 0.66112642],
+        [0.4561247 , 0.03299753, 0.28301395, ..., 0.40416811,
+         0.62562097, 0.82505394],
+        [0.06357989, 0.47247211, 0.44253275, ..., 0.58168103,
+         0.20268006, 0.44255636],
+...
+        [0.73372581, 0.39568357, 0.05499724, ..., 0.3976773 ,
+         0.123971  , 0.15135663],
+        [0.72793464, 0.34616904, 0.88823592, ..., 0.01449293,
+         0.166857  , 0.47648525],
+        [0.18968513, 0.31701866, 0.0286512 , ..., 0.81983812,
+         0.95291693, 0.11557284]],
+
+       [[0.81904375, 0.44149411, 0.1457184 , ..., 0.96980313,
+         0.86516942, 0.21033497],
+        [0.27182581, 0.09328096, 0.57835196, ..., 0.84415926,
+         0.46826959, 0.43996525],
+        [0.63027449, 0.8039534 , 0.09105773, ..., 0.12110523,
+         0.87748747, 0.8329081 ],
+        ...,
+        [0.71169729, 0.28461979, 0.15759044, ..., 0.48455657,
+         0.2424354 , 0.83184816],
+        [0.13676196, 0.66317843, 0.04800316, ..., 0.50201232,
+         0.75635377, 0.79807323],
+        [0.6953923 , 0.12508861, 0.27339259, ..., 0.8658732 ,
+         0.06305083, 0.61345238]]])
+Coordinates:
+  * time     (time) datetime64[ns] 2024-01-01 2024-01-01T01:00:00 ... 2024-01-02
+  * lat      (lat) float64 20.0 20.2 20.4 20.6 20.8 ... 59.0 59.2 59.4 59.6 59.8
+  * lon      (lon) float64 80.0 80.2 80.4 80.6 80.8 ... 139.2 139.4 139.6 139.8</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'random_data'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 25</li><li><span class="xr-has-index">lat</span>: 200</li><li><span class="xr-has-index">lon</span>: 300</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-d3ab724f-a657-4eda-996e-71abb271cffa" class="xr-array-in" type="checkbox" checked=""><label for="section-d3ab724f-a657-4eda-996e-71abb271cffa" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>0.5831 0.8969 0.9637 0.2948 0.4112 ... 0.2626 0.8659 0.06305 0.6135</span></div><div class="xr-array-data"><pre>array([[[0.58306895, 0.89689631, 0.9637159 , ..., 0.95514166,
+         0.56327264, 0.88194912],
+        [0.91348281, 0.81313667, 0.54342915, ..., 0.15515979,
+         0.99576906, 0.98561262],
+        [0.51785201, 0.12260406, 0.48123699, ..., 0.69087278,
+         0.07149597, 0.6591239 ],
+        ...,
+        [0.26463206, 0.48345431, 0.5136062 , ..., 0.15765791,
+         0.27837659, 0.96248451],
+        [0.45114488, 0.46012199, 0.94300064, ..., 0.52183468,
+         0.95946146, 0.93688643],
+        [0.23883549, 0.13021039, 0.91995392, ..., 0.96090563,
+         0.26284885, 0.33190806]],
+
+       [[0.60097816, 0.03713862, 0.25497976, ..., 0.16130851,
+         0.09510052, 0.66112642],
+        [0.4561247 , 0.03299753, 0.28301395, ..., 0.40416811,
+         0.62562097, 0.82505394],
+        [0.06357989, 0.47247211, 0.44253275, ..., 0.58168103,
+         0.20268006, 0.44255636],
+...
+        [0.73372581, 0.39568357, 0.05499724, ..., 0.3976773 ,
+         0.123971  , 0.15135663],
+        [0.72793464, 0.34616904, 0.88823592, ..., 0.01449293,
+         0.166857  , 0.47648525],
+        [0.18968513, 0.31701866, 0.0286512 , ..., 0.81983812,
+         0.95291693, 0.11557284]],
+
+       [[0.81904375, 0.44149411, 0.1457184 , ..., 0.96980313,
+         0.86516942, 0.21033497],
+        [0.27182581, 0.09328096, 0.57835196, ..., 0.84415926,
+         0.46826959, 0.43996525],
+        [0.63027449, 0.8039534 , 0.09105773, ..., 0.12110523,
+         0.87748747, 0.8329081 ],
+        ...,
+        [0.71169729, 0.28461979, 0.15759044, ..., 0.48455657,
+         0.2424354 , 0.83184816],
+        [0.13676196, 0.66317843, 0.04800316, ..., 0.50201232,
+         0.75635377, 0.79807323],
+        [0.6953923 , 0.12508861, 0.27339259, ..., 0.8658732 ,
+         0.06305083, 0.61345238]]])</pre></div></div></li><li class="xr-section-item"><input id="section-510fc939-54ec-4523-90dd-1ed7ffa4e6d7" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-510fc939-54ec-4523-90dd-1ed7ffa4e6d7" class="xr-section-summary">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2024-01-01 ... 2024-01-02</div><input id="attrs-4fa79049-e702-4505-9fc8-0523127c9b9c" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-4fa79049-e702-4505-9fc8-0523127c9b9c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-fb450048-bc6a-4729-b78f-21fe2667e3d8" class="xr-var-data-in" type="checkbox"><label for="data-fb450048-bc6a-4729-b78f-21fe2667e3d8" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2024-01-01T00:00:00.000000000', '2024-01-01T01:00:00.000000000',
+       '2024-01-01T02:00:00.000000000', '2024-01-01T03:00:00.000000000',
+       '2024-01-01T04:00:00.000000000', '2024-01-01T05:00:00.000000000',
+       '2024-01-01T06:00:00.000000000', '2024-01-01T07:00:00.000000000',
+       '2024-01-01T08:00:00.000000000', '2024-01-01T09:00:00.000000000',
+       '2024-01-01T10:00:00.000000000', '2024-01-01T11:00:00.000000000',
+       '2024-01-01T12:00:00.000000000', '2024-01-01T13:00:00.000000000',
+       '2024-01-01T14:00:00.000000000', '2024-01-01T15:00:00.000000000',
+       '2024-01-01T16:00:00.000000000', '2024-01-01T17:00:00.000000000',
+       '2024-01-01T18:00:00.000000000', '2024-01-01T19:00:00.000000000',
+       '2024-01-01T20:00:00.000000000', '2024-01-01T21:00:00.000000000',
+       '2024-01-01T22:00:00.000000000', '2024-01-01T23:00:00.000000000',
+       '2024-01-02T00:00:00.000000000'], dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lat</span></div><div class="xr-var-dims">(lat)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">20.0 20.2 20.4 ... 59.4 59.6 59.8</div><input id="attrs-6088e6cf-dd7f-4e46-99c6-65416424b141" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-6088e6cf-dd7f-4e46-99c6-65416424b141" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-2a3233b2-e4e1-46eb-97ad-019084a46274" class="xr-var-data-in" type="checkbox"><label for="data-2a3233b2-e4e1-46eb-97ad-019084a46274" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([20. , 20.2, 20.4, 20.6, 20.8, 21. , 21.2, 21.4, 21.6, 21.8, 22. , 22.2,
+       22.4, 22.6, 22.8, 23. , 23.2, 23.4, 23.6, 23.8, 24. , 24.2, 24.4, 24.6,
+       24.8, 25. , 25.2, 25.4, 25.6, 25.8, 26. , 26.2, 26.4, 26.6, 26.8, 27. ,
+       27.2, 27.4, 27.6, 27.8, 28. , 28.2, 28.4, 28.6, 28.8, 29. , 29.2, 29.4,
+       29.6, 29.8, 30. , 30.2, 30.4, 30.6, 30.8, 31. , 31.2, 31.4, 31.6, 31.8,
+       32. , 32.2, 32.4, 32.6, 32.8, 33. , 33.2, 33.4, 33.6, 33.8, 34. , 34.2,
+       34.4, 34.6, 34.8, 35. , 35.2, 35.4, 35.6, 35.8, 36. , 36.2, 36.4, 36.6,
+       36.8, 37. , 37.2, 37.4, 37.6, 37.8, 38. , 38.2, 38.4, 38.6, 38.8, 39. ,
+       39.2, 39.4, 39.6, 39.8, 40. , 40.2, 40.4, 40.6, 40.8, 41. , 41.2, 41.4,
+       41.6, 41.8, 42. , 42.2, 42.4, 42.6, 42.8, 43. , 43.2, 43.4, 43.6, 43.8,
+       44. , 44.2, 44.4, 44.6, 44.8, 45. , 45.2, 45.4, 45.6, 45.8, 46. , 46.2,
+       46.4, 46.6, 46.8, 47. , 47.2, 47.4, 47.6, 47.8, 48. , 48.2, 48.4, 48.6,
+       48.8, 49. , 49.2, 49.4, 49.6, 49.8, 50. , 50.2, 50.4, 50.6, 50.8, 51. ,
+       51.2, 51.4, 51.6, 51.8, 52. , 52.2, 52.4, 52.6, 52.8, 53. , 53.2, 53.4,
+       53.6, 53.8, 54. , 54.2, 54.4, 54.6, 54.8, 55. , 55.2, 55.4, 55.6, 55.8,
+       56. , 56.2, 56.4, 56.6, 56.8, 57. , 57.2, 57.4, 57.6, 57.8, 58. , 58.2,
+       58.4, 58.6, 58.8, 59. , 59.2, 59.4, 59.6, 59.8])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">lon</span></div><div class="xr-var-dims">(lon)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">80.0 80.2 80.4 ... 139.6 139.8</div><input id="attrs-cab04149-904f-4693-916a-f76aff71a2d3" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-cab04149-904f-4693-916a-f76aff71a2d3" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-dbcae00d-7501-40c8-b82e-a78e43292cf7" class="xr-var-data-in" type="checkbox"><label for="data-dbcae00d-7501-40c8-b82e-a78e43292cf7" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([ 80. ,  80.2,  80.4, ..., 139.4, 139.6, 139.8])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-79aaac68-cf21-4a85-86a7-63875d9c26d0" class="xr-section-summary-in" type="checkbox"><label for="section-79aaac68-cf21-4a85-86a7-63875d9c26d0" class="xr-section-summary">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-0834700d-c1cc-41d8-9fe6-dc97c5189cc9" class="xr-index-data-in" type="checkbox"><label for="index-0834700d-c1cc-41d8-9fe6-dc97c5189cc9" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2024-01-01 00:00:00', '2024-01-01 01:00:00',
+               '2024-01-01 02:00:00', '2024-01-01 03:00:00',
+               '2024-01-01 04:00:00', '2024-01-01 05:00:00',
+               '2024-01-01 06:00:00', '2024-01-01 07:00:00',
+               '2024-01-01 08:00:00', '2024-01-01 09:00:00',
+               '2024-01-01 10:00:00', '2024-01-01 11:00:00',
+               '2024-01-01 12:00:00', '2024-01-01 13:00:00',
+               '2024-01-01 14:00:00', '2024-01-01 15:00:00',
+               '2024-01-01 16:00:00', '2024-01-01 17:00:00',
+               '2024-01-01 18:00:00', '2024-01-01 19:00:00',
+               '2024-01-01 20:00:00', '2024-01-01 21:00:00',
+               '2024-01-01 22:00:00', '2024-01-01 23:00:00',
+               '2024-01-02 00:00:00'],
+              dtype='datetime64[ns]', name='time', freq='H'))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>lat</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-104eb4d7-2987-467a-bf50-236d6ac59f67" class="xr-index-data-in" type="checkbox"><label for="index-104eb4d7-2987-467a-bf50-236d6ac59f67" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Float64Index([              20.0,               20.2,               20.4,
+              20.599999999999998, 20.799999999999997, 20.999999999999996,
+              21.199999999999996, 21.399999999999995, 21.599999999999994,
+              21.799999999999994,
+              ...
+              57.999999999999865,  58.19999999999986, 58.399999999999864,
+              58.599999999999866,  58.79999999999986,  58.99999999999986,
+               59.19999999999986, 59.399999999999864,  59.59999999999986,
+              59.799999999999855],
+             dtype='float64', name='lat', length=200))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>lon</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-d4b1e47b-d5ae-4e9f-af92-a5a7f5cec323" class="xr-index-data-in" type="checkbox"><label for="index-d4b1e47b-d5ae-4e9f-af92-a5a7f5cec323" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Float64Index([              80.0,               80.2,               80.4,
+               80.60000000000001,  80.80000000000001,  81.00000000000001,
+               81.20000000000002,  81.40000000000002,  81.60000000000002,
+               81.80000000000003,
+              ...
+              138.00000000000082, 138.20000000000084, 138.40000000000083,
+              138.60000000000082, 138.80000000000084, 139.00000000000085,
+              139.20000000000084, 139.40000000000083, 139.60000000000085,
+              139.80000000000086],
+             dtype='float64', name='lon', length=300))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-aaf1f63f-c125-4e81-aaf9-312f91852d33" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-aaf1f63f-c125-4e81-aaf9-312f91852d33" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="861e88d2" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>dspred[<span class="dv">0</span>].plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="国控站点提取_files/figure-html/cell-13-output-1.png" width="400" height="400" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="addeb4fe" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Dss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt;
+Dimensions:  (time: 48, point: 2016)
+Coordinates:
+  * time     (time) datetime64[ns] 2024-01-01 ... 2024-01-02T23:00:00
+  * point    (point) int64 0 1 2 3 4 5 6 ... 2009 2010 2011 2012 2013 2014 2015
+Data variables:
+    c        (time, point) float64 49.0 28.0 72.0 52.0 ... 263.0 271.0 56.0
+    lat      (point) float64 39.88 40.29 39.93 39.89 ... 35.03 36.77 40.66 36.51
+    lon      (point) float64 116.4 116.2 116.4 116.4 ... 118.4 119.2 122.2 102.1</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input id="section-a39718b0-078d-4d25-bad7-58d0317be62d" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-a39718b0-078d-4d25-bad7-58d0317be62d" class="xr-section-summary" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 48</li><li><span class="xr-has-index">point</span>: 2016</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input id="section-e4dc75cf-eb12-448a-adef-14e5947180b3" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-e4dc75cf-eb12-448a-adef-14e5947180b3" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2024-01-01 ... 2024-01-02T23:00:00</div><input id="attrs-91bdc5ac-537a-4d5c-8dea-43ebe9315060" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-91bdc5ac-537a-4d5c-8dea-43ebe9315060" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-084e1691-fb18-4d7a-8946-a3715800962f" class="xr-var-data-in" type="checkbox"><label for="data-084e1691-fb18-4d7a-8946-a3715800962f" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2024-01-01T00:00:00.000000000', '2024-01-01T01:00:00.000000000',
+       '2024-01-01T02:00:00.000000000', '2024-01-01T03:00:00.000000000',
+       '2024-01-01T04:00:00.000000000', '2024-01-01T05:00:00.000000000',
+       '2024-01-01T06:00:00.000000000', '2024-01-01T07:00:00.000000000',
+       '2024-01-01T08:00:00.000000000', '2024-01-01T09:00:00.000000000',
+       '2024-01-01T10:00:00.000000000', '2024-01-01T11:00:00.000000000',
+       '2024-01-01T12:00:00.000000000', '2024-01-01T13:00:00.000000000',
+       '2024-01-01T14:00:00.000000000', '2024-01-01T15:00:00.000000000',
+       '2024-01-01T16:00:00.000000000', '2024-01-01T17:00:00.000000000',
+       '2024-01-01T18:00:00.000000000', '2024-01-01T19:00:00.000000000',
+       '2024-01-01T20:00:00.000000000', '2024-01-01T21:00:00.000000000',
+       '2024-01-01T22:00:00.000000000', '2024-01-01T23:00:00.000000000',
+       '2024-01-02T00:00:00.000000000', '2024-01-02T01:00:00.000000000',
+       '2024-01-02T02:00:00.000000000', '2024-01-02T03:00:00.000000000',
+       '2024-01-02T04:00:00.000000000', '2024-01-02T05:00:00.000000000',
+       '2024-01-02T06:00:00.000000000', '2024-01-02T07:00:00.000000000',
+       '2024-01-02T08:00:00.000000000', '2024-01-02T09:00:00.000000000',
+       '2024-01-02T10:00:00.000000000', '2024-01-02T11:00:00.000000000',
+       '2024-01-02T12:00:00.000000000', '2024-01-02T13:00:00.000000000',
+       '2024-01-02T14:00:00.000000000', '2024-01-02T15:00:00.000000000',
+       '2024-01-02T16:00:00.000000000', '2024-01-02T17:00:00.000000000',
+       '2024-01-02T18:00:00.000000000', '2024-01-02T19:00:00.000000000',
+       '2024-01-02T20:00:00.000000000', '2024-01-02T21:00:00.000000000',
+       '2024-01-02T22:00:00.000000000', '2024-01-02T23:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">point</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 ... 2012 2013 2014 2015</div><input id="attrs-07e1239d-6634-4cdc-a182-bc7a4171d6ec" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-07e1239d-6634-4cdc-a182-bc7a4171d6ec" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-15f3359f-53dc-4dc1-9a24-2b2c333d5f2e" class="xr-var-data-in" type="checkbox"><label for="data-15f3359f-53dc-4dc1-9a24-2b2c333d5f2e" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([   0,    1,    2, ..., 2013, 2014, 2015])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-7907d5b0-5a48-4cf2-a905-9a91521055f3" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-7907d5b0-5a48-4cf2-a905-9a91521055f3" class="xr-section-summary">Data variables: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>c</span></div><div class="xr-var-dims">(time, point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">49.0 28.0 72.0 ... 263.0 271.0 56.0</div><input id="attrs-884dc47d-9f52-42a2-83d4-040c54fff273" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-884dc47d-9f52-42a2-83d4-040c54fff273" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-a520c22e-005f-4891-81a9-00eb748deb73" class="xr-var-data-in" type="checkbox"><label for="data-a520c22e-005f-4891-81a9-00eb748deb73" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([[ 49.,  28.,  72., ...,  70.,  52.,  85.],
+       [ 76.,  26.,  85., ...,  73.,  58.,  87.],
+       [ 88.,  25.,  97., ...,  61.,  58.,  77.],
+       ...,
+       [ 52.,   7.,  17., ..., 259., 197.,  74.],
+       [ 14.,   7.,   9., ..., 261., 254.,  75.],
+       [  7.,   7.,   8., ..., 263., 271.,  56.]])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lat</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">39.88 40.29 39.93 ... 40.66 36.51</div><input id="attrs-8e40d17d-f568-42ad-9285-4472b7df9c02" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-8e40d17d-f568-42ad-9285-4472b7df9c02" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-239221de-76da-455d-a552-9cfd06b3f34b" class="xr-var-data-in" type="checkbox"><label for="data-239221de-76da-455d-a552-9cfd06b3f34b" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([39.8784 , 40.2915 , 39.9289 , ..., 36.7699 , 40.66302, 36.5056 ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lon</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">116.4 116.2 116.4 ... 122.2 102.1</div><input id="attrs-cf0a6ea2-e7fa-4564-bee6-fcac25db484a" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-cf0a6ea2-e7fa-4564-bee6-fcac25db484a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-8716d47a-c3f8-44f8-88a6-71df2faec985" class="xr-var-data-in" type="checkbox"><label for="data-8716d47a-c3f8-44f8-88a6-71df2faec985" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([116.3621, 116.2202, 116.4174, ..., 119.2041, 122.2469, 102.0738])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-a9fbfd56-9bb4-4bd3-b05e-281d39c6b2e2" class="xr-section-summary-in" type="checkbox"><label for="section-a9fbfd56-9bb4-4bd3-b05e-281d39c6b2e2" class="xr-section-summary">Indexes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-5a37611b-7cc5-40ac-88d0-de6186b2579e" class="xr-index-data-in" type="checkbox"><label for="index-5a37611b-7cc5-40ac-88d0-de6186b2579e" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2024-01-01 00:00:00', '2024-01-01 01:00:00',
+               '2024-01-01 02:00:00', '2024-01-01 03:00:00',
+               '2024-01-01 04:00:00', '2024-01-01 05:00:00',
+               '2024-01-01 06:00:00', '2024-01-01 07:00:00',
+               '2024-01-01 08:00:00', '2024-01-01 09:00:00',
+               '2024-01-01 10:00:00', '2024-01-01 11:00:00',
+               '2024-01-01 12:00:00', '2024-01-01 13:00:00',
+               '2024-01-01 14:00:00', '2024-01-01 15:00:00',
+               '2024-01-01 16:00:00', '2024-01-01 17:00:00',
+               '2024-01-01 18:00:00', '2024-01-01 19:00:00',
+               '2024-01-01 20:00:00', '2024-01-01 21:00:00',
+               '2024-01-01 22:00:00', '2024-01-01 23:00:00',
+               '2024-01-02 00:00:00', '2024-01-02 01:00:00',
+               '2024-01-02 02:00:00', '2024-01-02 03:00:00',
+               '2024-01-02 04:00:00', '2024-01-02 05:00:00',
+               '2024-01-02 06:00:00', '2024-01-02 07:00:00',
+               '2024-01-02 08:00:00', '2024-01-02 09:00:00',
+               '2024-01-02 10:00:00', '2024-01-02 11:00:00',
+               '2024-01-02 12:00:00', '2024-01-02 13:00:00',
+               '2024-01-02 14:00:00', '2024-01-02 15:00:00',
+               '2024-01-02 16:00:00', '2024-01-02 17:00:00',
+               '2024-01-02 18:00:00', '2024-01-02 19:00:00',
+               '2024-01-02 20:00:00', '2024-01-02 21:00:00',
+               '2024-01-02 22:00:00', '2024-01-02 23:00:00'],
+              dtype='datetime64[ns]', name='time', freq=None))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>point</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-db021cf5-1760-4794-9e61-a98eb3260820" class="xr-index-data-in" type="checkbox"><label for="index-db021cf5-1760-4794-9e61-a98eb3260820" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Int64Index([   0,    1,    2,    3,    4,    5,    6,    7,    8,    9,
+            ...
+            2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+           dtype='int64', name='point', length=2016))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-f7f8a328-5210-402f-89b5-22db06b8f634" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-f7f8a328-5210-402f-89b5-22db06b8f634" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="cb6c6c6b" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>dspred2<span class="op">=</span>dspred.interp(lon<span class="op">=</span>Dss.lon,lat<span class="op">=</span>Dss.lat)  <span class="co"># 插值到散点</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="41a2feef" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>dspred2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'random_data' (time: 25, point: 2016)&gt;
+array([[0.62706763, 0.6120858 , 0.66311303, ..., 0.12978111, 0.24529915,
+        0.34702168],
+       [0.34604329, 0.6057089 , 0.3785711 , ..., 0.03758578, 0.08869047,
+        0.4865718 ],
+       [0.40922173, 0.22748688, 0.48177678, ..., 0.03548094, 0.75778547,
+        0.55117093],
+       ...,
+       [0.55115732, 0.28780374, 0.36137095, ..., 0.75458898, 0.33194457,
+        0.58270155],
+       [0.67286847, 0.85610214, 0.7794916 , ..., 0.7485051 , 0.67988874,
+        0.41310721],
+       [0.93577394, 0.36431177, 0.91268267, ..., 0.16016135, 0.62392264,
+        0.40960265]])
+Coordinates:
+  * time     (time) datetime64[ns] 2024-01-01 2024-01-01T01:00:00 ... 2024-01-02
+    lon      (point) float64 116.4 116.2 116.4 116.4 ... 118.4 119.2 122.2 102.1
+    lat      (point) float64 39.88 40.29 39.93 39.89 ... 35.03 36.77 40.66 36.51
+  * point    (point) int64 0 1 2 3 4 5 6 ... 2009 2010 2011 2012 2013 2014 2015</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'random_data'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 25</li><li><span class="xr-has-index">point</span>: 2016</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-05971959-db82-4173-9df2-90ecbe1ba814" class="xr-array-in" type="checkbox" checked=""><label for="section-05971959-db82-4173-9df2-90ecbe1ba814" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>0.6271 0.6121 0.6631 0.6764 0.6604 ... 0.5152 0.1602 0.6239 0.4096</span></div><div class="xr-array-data"><pre>array([[0.62706763, 0.6120858 , 0.66311303, ..., 0.12978111, 0.24529915,
+        0.34702168],
+       [0.34604329, 0.6057089 , 0.3785711 , ..., 0.03758578, 0.08869047,
+        0.4865718 ],
+       [0.40922173, 0.22748688, 0.48177678, ..., 0.03548094, 0.75778547,
+        0.55117093],
+       ...,
+       [0.55115732, 0.28780374, 0.36137095, ..., 0.75458898, 0.33194457,
+        0.58270155],
+       [0.67286847, 0.85610214, 0.7794916 , ..., 0.7485051 , 0.67988874,
+        0.41310721],
+       [0.93577394, 0.36431177, 0.91268267, ..., 0.16016135, 0.62392264,
+        0.40960265]])</pre></div></div></li><li class="xr-section-item"><input id="section-0f2ec48f-0ff7-4961-8af4-883770909862" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-0f2ec48f-0ff7-4961-8af4-883770909862" class="xr-section-summary">Coordinates: <span>(4)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2024-01-01 ... 2024-01-02</div><input id="attrs-5aa01c35-79d4-4ee8-acbf-58b8b0b858d3" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-5aa01c35-79d4-4ee8-acbf-58b8b0b858d3" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-9a729c5c-df3f-48fc-b272-0154594dcdb3" class="xr-var-data-in" type="checkbox"><label for="data-9a729c5c-df3f-48fc-b272-0154594dcdb3" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2024-01-01T00:00:00.000000000', '2024-01-01T01:00:00.000000000',
+       '2024-01-01T02:00:00.000000000', '2024-01-01T03:00:00.000000000',
+       '2024-01-01T04:00:00.000000000', '2024-01-01T05:00:00.000000000',
+       '2024-01-01T06:00:00.000000000', '2024-01-01T07:00:00.000000000',
+       '2024-01-01T08:00:00.000000000', '2024-01-01T09:00:00.000000000',
+       '2024-01-01T10:00:00.000000000', '2024-01-01T11:00:00.000000000',
+       '2024-01-01T12:00:00.000000000', '2024-01-01T13:00:00.000000000',
+       '2024-01-01T14:00:00.000000000', '2024-01-01T15:00:00.000000000',
+       '2024-01-01T16:00:00.000000000', '2024-01-01T17:00:00.000000000',
+       '2024-01-01T18:00:00.000000000', '2024-01-01T19:00:00.000000000',
+       '2024-01-01T20:00:00.000000000', '2024-01-01T21:00:00.000000000',
+       '2024-01-01T22:00:00.000000000', '2024-01-01T23:00:00.000000000',
+       '2024-01-02T00:00:00.000000000'], dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lon</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">116.4 116.2 116.4 ... 122.2 102.1</div><input id="attrs-d6f7233a-2ac5-4b66-9056-22c520d3e0c1" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-d6f7233a-2ac5-4b66-9056-22c520d3e0c1" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-4bd676d9-dc6b-4fa3-a816-d0dae3da34f3" class="xr-var-data-in" type="checkbox"><label for="data-4bd676d9-dc6b-4fa3-a816-d0dae3da34f3" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([116.3621, 116.2202, 116.4174, ..., 119.2041, 122.2469, 102.0738])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span>lat</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">39.88 40.29 39.93 ... 40.66 36.51</div><input id="attrs-98e104b5-4d11-45fc-bb3a-8580174e8f1a" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-98e104b5-4d11-45fc-bb3a-8580174e8f1a" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-cf2d7529-f44b-4010-ac20-7d528baac100" class="xr-var-data-in" type="checkbox"><label for="data-cf2d7529-f44b-4010-ac20-7d528baac100" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([39.8784 , 40.2915 , 39.9289 , ..., 36.7699 , 40.66302, 36.5056 ])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">point</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 ... 2012 2013 2014 2015</div><input id="attrs-fef5662b-5873-46c4-8c88-06641313f8e9" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-fef5662b-5873-46c4-8c88-06641313f8e9" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-c6f63b7d-3b83-4b80-974f-1813254346d1" class="xr-var-data-in" type="checkbox"><label for="data-c6f63b7d-3b83-4b80-974f-1813254346d1" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([   0,    1,    2, ..., 2013, 2014, 2015])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-da995f12-d54e-4714-8a48-e2df7fd303dd" class="xr-section-summary-in" type="checkbox"><label for="section-da995f12-d54e-4714-8a48-e2df7fd303dd" class="xr-section-summary">Indexes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-661be789-eef1-43b5-9a14-4c39d6503a6d" class="xr-index-data-in" type="checkbox"><label for="index-661be789-eef1-43b5-9a14-4c39d6503a6d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2024-01-01 00:00:00', '2024-01-01 01:00:00',
+               '2024-01-01 02:00:00', '2024-01-01 03:00:00',
+               '2024-01-01 04:00:00', '2024-01-01 05:00:00',
+               '2024-01-01 06:00:00', '2024-01-01 07:00:00',
+               '2024-01-01 08:00:00', '2024-01-01 09:00:00',
+               '2024-01-01 10:00:00', '2024-01-01 11:00:00',
+               '2024-01-01 12:00:00', '2024-01-01 13:00:00',
+               '2024-01-01 14:00:00', '2024-01-01 15:00:00',
+               '2024-01-01 16:00:00', '2024-01-01 17:00:00',
+               '2024-01-01 18:00:00', '2024-01-01 19:00:00',
+               '2024-01-01 20:00:00', '2024-01-01 21:00:00',
+               '2024-01-01 22:00:00', '2024-01-01 23:00:00',
+               '2024-01-02 00:00:00'],
+              dtype='datetime64[ns]', name='time', freq='H'))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>point</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-b9edcf05-6008-4920-8632-0217493fad8d" class="xr-index-data-in" type="checkbox"><label for="index-b9edcf05-6008-4920-8632-0217493fad8d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Int64Index([   0,    1,    2,    3,    4,    5,    6,    7,    8,    9,
+            ...
+            2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+           dtype='int64', name='point', length=2016))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-bc71b1ac-f228-4fa6-97c9-aa401c7d5714" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-bc71b1ac-f228-4fa6-97c9-aa401c7d5714" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="006a8d93" class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>Dss.c</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(--jp-content-font-color0, rgba(0, 0, 0, 1));
+  --xr-font-color2: var(--jp-content-font-color2, rgba(0, 0, 0, 0.54));
+  --xr-font-color3: var(--jp-content-font-color3, rgba(0, 0, 0, 0.38));
+  --xr-border-color: var(--jp-border-color2, #e0e0e0);
+  --xr-disabled-color: var(--jp-layout-color3, #bdbdbd);
+  --xr-background-color: var(--jp-layout-color0, white);
+  --xr-background-color-row-even: var(--jp-layout-color1, white);
+  --xr-background-color-row-odd: var(--jp-layout-color2, #eeeeee);
+}
+
+html[theme=dark],
+body[data-theme=dark],
+body.vscode-dark {
+  --xr-font-color0: rgba(255, 255, 255, 1);
+  --xr-font-color2: rgba(255, 255, 255, 0.54);
+  --xr-font-color3: rgba(255, 255, 255, 0.38);
+  --xr-border-color: #1F1F1F;
+  --xr-disabled-color: #515151;
+  --xr-background-color: #111111;
+  --xr-background-color-row-even: #111111;
+  --xr-background-color-row-odd: #313131;
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 20px 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: none;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: '►';
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: '▼';
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: '(';
+}
+
+.xr-dim-list:after {
+  content: ')';
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ',';
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  margin-bottom: 0;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  background-color: var(--xr-background-color) !important;
+  padding-bottom: 5px !important;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.DataArray 'c' (time: 48, point: 2016)&gt;
+array([[ 49.,  28.,  72., ...,  70.,  52.,  85.],
+       [ 76.,  26.,  85., ...,  73.,  58.,  87.],
+       [ 88.,  25.,  97., ...,  61.,  58.,  77.],
+       ...,
+       [ 52.,   7.,  17., ..., 259., 197.,  74.],
+       [ 14.,   7.,   9., ..., 261., 254.,  75.],
+       [  7.,   7.,   8., ..., 263., 271.,  56.]])
+Coordinates:
+  * time     (time) datetime64[ns] 2024-01-01 ... 2024-01-02T23:00:00
+  * point    (point) int64 0 1 2 3 4 5 6 ... 2009 2010 2011 2012 2013 2014 2015</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.DataArray</div><div class="xr-array-name">'c'</div><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 48</li><li><span class="xr-has-index">point</span>: 2016</li></ul></div><ul class="xr-sections"><li class="xr-section-item"><div class="xr-array-wrap"><input id="section-56574d3f-40c0-43df-a519-a454b7ee27ed" class="xr-array-in" type="checkbox" checked=""><label for="section-56574d3f-40c0-43df-a519-a454b7ee27ed" title="Show/hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-array-preview xr-preview"><span>49.0 28.0 72.0 52.0 nan 47.0 ... 92.0 278.0 227.0 263.0 271.0 56.0</span></div><div class="xr-array-data"><pre>array([[ 49.,  28.,  72., ...,  70.,  52.,  85.],
+       [ 76.,  26.,  85., ...,  73.,  58.,  87.],
+       [ 88.,  25.,  97., ...,  61.,  58.,  77.],
+       ...,
+       [ 52.,   7.,  17., ..., 259., 197.,  74.],
+       [ 14.,   7.,   9., ..., 261., 254.,  75.],
+       [  7.,   7.,   8., ..., 263., 271.,  56.]])</pre></div></div></li><li class="xr-section-item"><input id="section-1a0927f2-ea58-46b0-a5d6-42cd30c7677c" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-1a0927f2-ea58-46b0-a5d6-42cd30c7677c" class="xr-section-summary">Coordinates: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2024-01-01 ... 2024-01-02T23:00:00</div><input id="attrs-5b5f484e-fe3f-4e3e-ba7d-f03d43c0c38c" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-5b5f484e-fe3f-4e3e-ba7d-f03d43c0c38c" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-e7c5535c-de9c-4b1c-b5ec-d224beb93494" class="xr-var-data-in" type="checkbox"><label for="data-e7c5535c-de9c-4b1c-b5ec-d224beb93494" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array(['2024-01-01T00:00:00.000000000', '2024-01-01T01:00:00.000000000',
+       '2024-01-01T02:00:00.000000000', '2024-01-01T03:00:00.000000000',
+       '2024-01-01T04:00:00.000000000', '2024-01-01T05:00:00.000000000',
+       '2024-01-01T06:00:00.000000000', '2024-01-01T07:00:00.000000000',
+       '2024-01-01T08:00:00.000000000', '2024-01-01T09:00:00.000000000',
+       '2024-01-01T10:00:00.000000000', '2024-01-01T11:00:00.000000000',
+       '2024-01-01T12:00:00.000000000', '2024-01-01T13:00:00.000000000',
+       '2024-01-01T14:00:00.000000000', '2024-01-01T15:00:00.000000000',
+       '2024-01-01T16:00:00.000000000', '2024-01-01T17:00:00.000000000',
+       '2024-01-01T18:00:00.000000000', '2024-01-01T19:00:00.000000000',
+       '2024-01-01T20:00:00.000000000', '2024-01-01T21:00:00.000000000',
+       '2024-01-01T22:00:00.000000000', '2024-01-01T23:00:00.000000000',
+       '2024-01-02T00:00:00.000000000', '2024-01-02T01:00:00.000000000',
+       '2024-01-02T02:00:00.000000000', '2024-01-02T03:00:00.000000000',
+       '2024-01-02T04:00:00.000000000', '2024-01-02T05:00:00.000000000',
+       '2024-01-02T06:00:00.000000000', '2024-01-02T07:00:00.000000000',
+       '2024-01-02T08:00:00.000000000', '2024-01-02T09:00:00.000000000',
+       '2024-01-02T10:00:00.000000000', '2024-01-02T11:00:00.000000000',
+       '2024-01-02T12:00:00.000000000', '2024-01-02T13:00:00.000000000',
+       '2024-01-02T14:00:00.000000000', '2024-01-02T15:00:00.000000000',
+       '2024-01-02T16:00:00.000000000', '2024-01-02T17:00:00.000000000',
+       '2024-01-02T18:00:00.000000000', '2024-01-02T19:00:00.000000000',
+       '2024-01-02T20:00:00.000000000', '2024-01-02T21:00:00.000000000',
+       '2024-01-02T22:00:00.000000000', '2024-01-02T23:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">point</span></div><div class="xr-var-dims">(point)</div><div class="xr-var-dtype">int64</div><div class="xr-var-preview xr-preview">0 1 2 3 4 ... 2012 2013 2014 2015</div><input id="attrs-c4259c7c-67c1-4de5-bf1a-5fe5494809d3" class="xr-var-attrs-in" type="checkbox" disabled=""><label for="attrs-c4259c7c-67c1-4de5-bf1a-5fe5494809d3" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-0b3dd157-e143-42a1-8e49-2541799e3d15" class="xr-var-data-in" type="checkbox"><label for="data-0b3dd157-e143-42a1-8e49-2541799e3d15" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"></dl></div><div class="xr-var-data"><pre>array([   0,    1,    2, ..., 2013, 2014, 2015])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-317b900d-e64e-42b0-9e5d-f2267389c564" class="xr-section-summary-in" type="checkbox"><label for="section-317b900d-e64e-42b0-9e5d-f2267389c564" class="xr-section-summary">Indexes: <span>(2)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-29974cbe-064d-4833-b119-167eac8525db" class="xr-index-data-in" type="checkbox"><label for="index-29974cbe-064d-4833-b119-167eac8525db" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2024-01-01 00:00:00', '2024-01-01 01:00:00',
+               '2024-01-01 02:00:00', '2024-01-01 03:00:00',
+               '2024-01-01 04:00:00', '2024-01-01 05:00:00',
+               '2024-01-01 06:00:00', '2024-01-01 07:00:00',
+               '2024-01-01 08:00:00', '2024-01-01 09:00:00',
+               '2024-01-01 10:00:00', '2024-01-01 11:00:00',
+               '2024-01-01 12:00:00', '2024-01-01 13:00:00',
+               '2024-01-01 14:00:00', '2024-01-01 15:00:00',
+               '2024-01-01 16:00:00', '2024-01-01 17:00:00',
+               '2024-01-01 18:00:00', '2024-01-01 19:00:00',
+               '2024-01-01 20:00:00', '2024-01-01 21:00:00',
+               '2024-01-01 22:00:00', '2024-01-01 23:00:00',
+               '2024-01-02 00:00:00', '2024-01-02 01:00:00',
+               '2024-01-02 02:00:00', '2024-01-02 03:00:00',
+               '2024-01-02 04:00:00', '2024-01-02 05:00:00',
+               '2024-01-02 06:00:00', '2024-01-02 07:00:00',
+               '2024-01-02 08:00:00', '2024-01-02 09:00:00',
+               '2024-01-02 10:00:00', '2024-01-02 11:00:00',
+               '2024-01-02 12:00:00', '2024-01-02 13:00:00',
+               '2024-01-02 14:00:00', '2024-01-02 15:00:00',
+               '2024-01-02 16:00:00', '2024-01-02 17:00:00',
+               '2024-01-02 18:00:00', '2024-01-02 19:00:00',
+               '2024-01-02 20:00:00', '2024-01-02 21:00:00',
+               '2024-01-02 22:00:00', '2024-01-02 23:00:00'],
+              dtype='datetime64[ns]', name='time', freq=None))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>point</div></div><div class="xr-index-preview">PandasIndex</div><div></div><input id="index-1e0b3484-52df-4647-88ce-d2b76a200a1d" class="xr-index-data-in" type="checkbox"><label for="index-1e0b3484-52df-4647-88ce-d2b76a200a1d" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Int64Index([   0,    1,    2,    3,    4,    5,    6,    7,    8,    9,
+            ...
+            2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
+           dtype='int64', name='point', length=2016))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-597e96c3-0471-49dc-af3e-67173a306d32" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-597e96c3-0471-49dc-af3e-67173a306d32" class="xr-section-summary" title="Expand/collapse section">Attributes: <span>(0)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"></dl></div></li></ul></div></div>
+</div>
+</div>
+<div id="2a986b7b" class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Dss.c和dspred2可以相互比较了</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../notebooks/国控站点画到地图上.html" class="pagination-link" aria-label="plot_国控点臭氧">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">plot_国控点臭氧</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../notebooks/cartopymap.html" class="pagination-link" aria-label="plot_cartopy_map模板">
+        <span class="nav-page-text">plot_cartopy_map模板</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Copyright 2024, Jingkai Xue</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/">
+      <i class="bi bi-twitter" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
