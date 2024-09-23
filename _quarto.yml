@@ -51,8 +51,10 @@ website:
 
       - section: "画图"
         contents:
-          - text: "extract_wrf_站点wind"
+          - text: "extract_课题组wrf_站点wind"
             href: notebooks/wrf_extract_wind.ipynb
+          - text: "extract_wrfout_站点wind"
+            href: notebooks/wrfout_站点提取.ipynb            
           - text: "extract_wrf_区域多种变量"
             href: notebooks/extractwrf_LC.ipynb
           - text: "extract_wrfchem_区域变量（近地面、柱浓度）"
